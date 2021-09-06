@@ -4,8 +4,25 @@ New API specification for go-eCharger Home+ with WiFi connection
 Die API keys lassen sich via http-request und mqtt lesen/schreiben.
 
 ## HTTP Api
+Die API v2 muss in der App erst aktiviert werden:
 
-TODO erklärung wie http api einzuschalten und zu bedienen.
+<img src="screenshots/http-api-app-enable.png?raw=true" width="200" />
+
+Danach können vereinzelte API keys abgefragt werden:
+
+`http://192.168.0.75/api/status?filter=["rfb","alw","acu","adi","amp"]`
+
+<img src="screenshots/http-api-status-filtered.png?raw=true" />
+
+Oder gleich alle API keys auf einmal (höhere Last am System, viel traffic, sollte nicht für den Dauerbetrieb benutzt werden):
+
+`http://192.168.0.75/api/status`
+
+<img src="screenshots/http-api-status.png?raw=true" />
+
+Mehrere API Werte setzen:
+
+TODO
 
 ## MQTT
 
