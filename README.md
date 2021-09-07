@@ -55,4 +55,23 @@ TODO erklärung wie mqtt einzuschalten und zu bedienen.
 | rssi       | R          | optional&lt;int8&gt;         | Status        | RSSI signal strength                                                                |
 | lssfc      | R          | optional&lt;milliseconds&gt; | Status        | lastStaSwitchedFromConnected (in milliseconds)                                      |
 | lsstc      | R          | optional&lt;milliseconds&gt; | Status        | lastStaSwitchedToConnected (in milliseconds)                                        |
+| ehs        | R          | size_t                       | Status        | ESP heap size                                                                       |
+| efh        | R          | size_t                       | Status        | ESP free heap                                                                       |
+| efh32      | R          | size_t                       | Status        | ESP free heap 32bit aligned                                                         |
+| efh8       | R          | size_t                       | Status        | ESP free heap 8bit aligned                                                          |
+| fem        | R          | uint8                        | Constant      | Flash Encryption Mode (Disabled=0, Development=1, Release=2)                        |
+| sbe        | R          | bool                         | Constant      | Secure boot enabled                                                                 |
+| emfh       | R          | size_t                       | Status        | ESP minimum free heap since boot                                                    |
+| emhb       | R          | size_t                       | Status        | ESP max size of allocated heap block since boot                                     |
+| eci        | R          | object                       | Constant      | ESP chip info (model: ESP32=1, ESP32S2=2, ESP32S3=4, ESP32C3=5; features: EMB_FLASH=bit0, WIFI_BGN=bit1, BLE=bit4, BT=bit5) |
+| ecf        | R          | object                       | Constant      | ESP CPU freq (source: XTAL=0, PLL=1, 8M=2, APLL=3)                                  |
+| efi        | R          | object                       | Constant      | ESP Flash info (spi_mode: QIO=0, QOUT=1, DIO=2, DOUT=3, FAST_READ=4, SLOW_READ=5; spi_speed: 40M=0, 26M=1, 20M=2, 80M=15; spi_size: 1MB=0, 2MB=1, 4MB=2, 8MB=3, 16MB=4, MAX=5) |
+| eem        | R          | optional&lt;string&gt;       | Constant      | ESP CPU freq (source: XTAL=0, PLL=1, 8M=2, APLL=3)                                  |
+| esr        | R          | array                        | Status        | rtc_get_reset_reason for core 0 and 1 (NO_MEAN=0, POWERON_RESET=1, SW_RESET=3, OWDT_RESET=4, DEEPSLEEP_RESET=5, SDIO_RESET=6, TG0WDT_SYS_RESET=7, TG1WDT_SYS_RESET=8, RTCWDT_SYS_RESET=9, INTRUSION_RESET=10, TGWDT_CPU_RESET=11, SW_CPU_RESET=12, RTCWDT_CPU_RESET=13, EXT_CPU_RESET=14, RTCWDT_BROWN_OUT_RESET=15, RTCWDT_RTC_RESET=16) |
+| rr         | R          | uint8                        | Status        | esp_reset_reason (UNKNOWN=0, POWERON=1, EXT=2, SW=3, PANIC=4, INT_WDT=5, TASK_WDT=6, WDT=7, DEEPSLEEP=8, BROWNOUT=9, SDIO=10) |
+| fwan       | R          | string                       | Constant      | factoryWifiApName                                                                   |
+| wan        | R/W        | string                       | Config        | wifiApName                                                                          |
+| facwak     | R          | string                       | Constant      | WiFi AccessPoint Key RESET VALUE (factory)                                          |
+| wak        | R/W        | string                       | Config        | WiFi AccessPoint Key (read/write from http)                                         |
+| wen        | R/W        | bool                         | Config        | wifiEnabled (bool), turns off/on the WiFi (not the AccessPoint)                     |
 | amp        | R/W        | uint8                        | Config        | requestedCurrent in Ampere, used for display on LED ring and logic calculations     |
