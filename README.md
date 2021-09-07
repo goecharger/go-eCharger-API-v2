@@ -74,4 +74,31 @@ TODO erklärung wie mqtt einzuschalten und zu bedienen.
 | facwak     | R          | string                       | Constant      | WiFi AccessPoint Key RESET VALUE (factory)                                          |
 | wak        | R/W        | string                       | Config        | WiFi AccessPoint Key (read/write from http)                                         |
 | wen        | R/W        | bool                         | Config        | wifiEnabled (bool), turns off/on the WiFi (not the AccessPoint)                     |
+| pass       | W          | string                       | Config        | userPassword                                                                        |
+| tse        | R/W        | bool                         | Config        | time server enabled (NTP)                                                           |
+| ts         | R          | string                       | Config        | time server                                                                         |
+| tssm       | R          | uint8                        | Config        | time server sync mode (IMMED=0, SMOOTH=1)                                           |
+| tssi       | R          | milliseconds                 | Config        | time server sync interval (in ms, 15s minimum)                                      |
+| tsss       | R          | uint8                        | Config        | time server sync status (RESET=0, COMPLETED=1, IN_PROGRESS=2)                       |
+| tsom       | R          | uint8                        | Status        | time server operating mode (POLL=0, LISTENONLY=1)                                   |
+| tof        | R/W        | minutes                      | Config        | timezone offset in minutes                                                          |
+| tds        | R/W        | uint8                        | Config        | timezone daylight saving mode, None=0, EuropeanSummerTime=1, UsDaylightTime=2       |
+| utc        | R/W        | string                       | Status        | utc time                                                                            |
+| loc        | R          | string                       | Status        | local time                                                                          |
+| led        | R          | object                       | Status        | internal infos about currently running led animation                                |
+| lbr        | R          | uint8                        | Config        | led_bright, 0-255                                                                   |
+| lmo        | R/W        | uint8                        | Config        | logic mode (Default=3, Awattar=4, AutomaticStop=5)                                  |
+| ama        | R/W        | uint8                        | Config        | ampere_max limit                                                                    |
+| clp        | R/W        | array                        | Config        | current limit presets, max. 5 entries                                               |
+| bac        | R/W        | bool                         | Config        | Button allow Current change                                                         |
+| sdp        | R/W        | bool                         | Config        | Button Allow Force change                                                           |
+| lbp        | R          | milliseconds                 | Status        | lastButtonPress in milliseconds                                                     |
 | amp        | R/W        | uint8                        | Config        | requestedCurrent in Ampere, used for display on LED ring and logic calculations     |
+| ffna       | R          | string                       | Constant      | factoryFriendlyName                                                                 |
+| fna        | R/W        | string                       | Config        | friendlyName                                                                        |
+| cid        | R/W        | string                       | Config        | color_idle, format: #RRGGBB                                                         |
+| cwc        | R/W        | string                       | Config        | color_waitcar, format: #RRGGBB                                                      |
+| cch        | R/W        | string                       | Config        | color_charging, format: #RRGGBB                                                     |
+| cfi        | R/W        | string                       | Config        | color_finished, format: #RRGGBB                                                     |
+| ust        | R/W        | uint8                        | Config        | unlock_setting (Normal=0, AutoUnlock=1, AlwaysLock=2)                               |
+| lck        | R          | uint8                        | Status        | Effective lock setting, as sent to Charge Ctrl (Normal=0, AutoUnlock=1, AlwaysLock=2, ForceUnlock=3) |
