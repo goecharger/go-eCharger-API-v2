@@ -20,9 +20,19 @@ Oder gleich alle API keys auf einmal (höhere Last am System, viel traffic, soll
 
 <img src="screenshots/http-api-status.png?raw=true" />
 
-Mehrere API Werte setzen:
+API Werte setzen:
 
-TODO
+Example urls mit keys aus der Tabelle unten:
+
+```
+http://192.168.0.75/api/set?fna="mein charger"
+http://192.168.0.75/api/set?amp=16
+http://192.168.0.75/api/set?dwo=null
+http://192.168.0.75/api/set?dwo=3.14
+http://192.168.0.75/api/set?bac=false&sdp=true
+```
+
+TODO genauere beschreibung
 
 ## MQTT
 
