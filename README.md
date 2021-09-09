@@ -112,3 +112,22 @@ TODO erklärung wie mqtt einzuschalten und zu bedienen.
 | cfi        | R/W        | string                       | Config        | color_finished, format: #RRGGBB                                                     |
 | ust        | R/W        | uint8                        | Config        | unlock_setting (Normal=0, AutoUnlock=1, AlwaysLock=2)                               |
 | lck        | R          | uint8                        | Status        | Effective lock setting, as sent to Charge Ctrl (Normal=0, AutoUnlock=1, AlwaysLock=2, ForceUnlock=3) |
+| sch_week   | R/W        | object                       | Config        | scheduler_weekday, control enum values: Disabled=0, Inside=1, Outside=2             |
+| sch_satur  | R/W        | object                       | Config        | scheduler_saturday, control enum values: Disabled=0, Inside=1, Outside=2            |
+| sch_sund   | R/W        | object                       | Config        | scheduler_sunday, control enum values: Disabled=0, Inside=1, Outside=2              |
+| nmo        | R/W        | bool                         | Config        | norway_mode / ground check enabled when norway mode is disabled (inverted)          |
+| fsp        | R          | bool                         | Status        | force_single_phase (shows if currently single phase charge is enforced              |
+| lrn        | W          | uint8                        | Other         | set this to 0-9 to learn last read card id                                          |
+| del        | W          | uint8                        | Other         | set this to 0-9 to clear card (erases card name, energy and rfid id)                |
+| acs        | R/W        | uint8                        | Config        | access_control user setting (Open=0, Wait=1)                                        |
+| frc        | R/W        | uint8                        | Config        | forceState (Neutral=0, Off=1, On=2)                                                 |
+| rbc        | R          | uint32                       | Status        | reboot_counter                                                                      |
+| rbt        | R          | milliseconds                 | Status        | time since boot in milliseconds                                                     |
+| car        | R          | optional&lt;uint8&gt;        | Status        | carState, null if internal error (Unknown/Error=0, Idle=1, Charging=2, WaitCar=3, Complete=4, Error=5) |
+| err        | R          | optional&lt;uint8&gt;        | Status        | error, null if internal error (Unknown/Error=0, Idle=1, Charging=2, WaitCar=3, Complete=4, Error=5) |
+| cbl        | R          | optional&lt;int&gt;          | Status        | cable_current_limit in A                                                            |
+| pha        | R          | optional&lt;array&gt;        | Status        | phases                                                                              |
+| wh         | R          | double                       | Status        | energy in Wh since car connected                                                    |
+| trx        | R          | optional&lt;uint8&gt;        | Status        | transaction, null when no transaction, 0 when without card, otherwise cardIndex + 1 (1: 0. card, 2: 1. card, ...) |
+| fwv        | R          | string                       | Constant      | FW_VERSION                                                                          |
+| arv        | R          | string                       | Constant      | app recommended version (used to show in the app that the app is outdated)          |
