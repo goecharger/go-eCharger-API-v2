@@ -147,3 +147,37 @@ TODO erklärung wie mqtt einzuschalten und zu bedienen.
 | pto        | R          | uint32                       | Constant      | partition table offset in flash                                                     |
 | lse        | R/W        | bool                         | Config        | led_save_energy                                                                     |
 | cdi        | R          | object                       | Status        | charging duration info (null=no charging in progress, type=0 counter going up, type=1 duration in ms) |
+| lccfi      | R          | optional&lt;milliseconds&gt; | Status        | lastCarStateChangedFromIdle (in ms)                                                 |
+| lccfc      | R          | optional&lt;milliseconds&gt; | Status        | lastCarStateChangedFromCharging (in ms)                                             |
+| lcctc      | R          | optional&lt;milliseconds&gt; | Status        | lastCarStateChangedToCharging (in ms)                                               |
+| tma        | R          | array                        | Status        | temperature sensors                                                                 |
+| amt        | R          | int                          | Status        | temperatureCurrentLimit                                                             |
+| nrg        | R          | array                        | Status        | energy array, U (L1, L2, L3, N), I (L1, L2, L3), P (L1, L2, L3, N, Total), pf (L1, L2, L3, N) |
+| modelStatus | R         | uint8                        | Status        | Reason why we allow charging or not right now (NotChargingBecauseNoChargeCtrlData=0, NotChargingBecauseOvertemperature=1, NotChargingBecauseAccessControlWait=2, ChargingBecauseForceStateOn=3, NotChargingBecauseForceStateOff=4, NotChargingBecauseScheduler=5, NotChargingBecauseEnergyLimit=6, ChargingBecauseAwattarPriceLow=7, ChargingBecauseAutomaticStopTestLadung=8, ChargingBecauseAutomaticStopNotEnoughTime=9, ChargingBecauseAutomaticStop=10, ChargingBecauseAutomaticStopNoClock=11, ChargingBecausePvSurplus=12, ChargingBecauseFallbackGoEDefault=13, ChargingBecauseFallbackGoEScheduler=14, ChargingBecauseFallbackDefault=15, NotChargingBecauseFallbackGoEAwattar=16, NotChargingBecauseFallbackAwattar=17, NotChargingBecauseFallbackAutomaticStop=18, ChargingBecauseCarCompatibilityKeepAlive=19, ChargingBecauseChargePauseNotAllowed=20, NotChargingBecauseSimulateUnplugging=22, NotChargingBecausePhaseSwitch=23, NotChargingBecauseMinPauseDuration=24) |
+| msi        | R          | uint8                        | Status        | Reason why we allow charging or not right now INTERNAL without cpDisabledRequest    |
+| lmsc       | R          | milliseconds                 | Status        | last model status change                                                            |
+| mca        | R/W        | uint8                        | Config        | minChargingCurrent                                                                  |
+| awc        | R/W        | uint8                        | Config        | awattar country (Austria=0, Germany=1)                                              |
+| awp        | R/W        | float                        | Config        | awattarMaxPrice in ct                                                               |
+| awcp       | R          | optional&lt;object&gt;       | Status        | awattar current price                                                               |
+| awpl       | R/W        | array                        | Status        | awattar price list, timestamps are measured in unix-time, seconds since 1970        |
+| awe        | R/W        | bool                         | Config        | useAwattar                                                                          |
+| att        | R/W        | seconds                      | Config        | automatic stop time in seconds since day begin, calculation: (hours*3600)+(minutes*60)+(seconds) |
+| ate        | R/W        | double                       | Config        | automatic stop energy in Wh                                                         |
+| ara        | R/W        | bool                         | Config        | automatic stop remain in aWATTar                                                    |
+| acp        | R/W        | bool                         | Config        | allowChargePause (car compatiblity)                                                 |
+| cco        | R/W        | double                       | Config        | car consumption (only stored for app)                                               |
+| esk        | R/W        | bool                         | Config        | energy set kwh (only stored for app)                                                |
+| psmd       | R/W        | milliseconds                 | Config        | forceSinglePhaseDuration (in milliseconds)                                          |
+| sumd       | R/W        | milliseconds                 | Config        | simulate unpluging duration (in milliseconds)                                       |
+| mpwst      | R/W        | milliseconds                 | Config        | min phase wish switch time (in milliseconds)                                        |
+| mptwt      | R/W        | milliseconds                 | Config        | min phase toggle wait time (in milliseconds)                                        |
+| mmp        | R          | float                        | Status        | maximumMeasuredChargingPower (debug)                                                |
+| tlf        | R          | bool                         | Status        | testLadungFinished (debug)                                                          |
+| tls        | R          | bool                         | Status        | testLadungStarted (debug)                                                           |
+| atp        | R          | optional&lt;object&gt;       | Status        | nextTripPlanData (debug)                                                            |
+| ct         | R/W        | string                       | Config        | car type, free text string (max. 64 characters, only stored for app)                |
+| mci        | R/W        | milliseconds                 | Config        | minimumChargingInterval in milliseconds (0 means disabled)                          |
+| mcpd       | R/W        | milliseconds                 | Config        | minChargePauseDuration in milliseconds (0 means disabled)                           |
+| mcpea      | R/W        | optional&lt;milliseconds&gt; | Status        | minChargePauseEndsAt (set to null to abort current minChargePauseDuration)          |
+| su         | R/W        | bool                         | Config        | simulateUnplugging                                                                  |
