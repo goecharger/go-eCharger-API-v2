@@ -8,21 +8,32 @@ Die API v2 muss in der App erst aktiviert werden:
 
 <img src="screenshots/http-api-app-enable.png?raw=true" width="200" />
 
-Danach können vereinzelte API keys abgefragt werden:
+## HTTP Api
 
-`http://192.168.0.75/api/status?filter=rfb,alw,acu,adi,amp`
+Die API v2 muss in der App erst aktiviert werden:
 
-<img src="screenshots/http-api-status-filtered.png?raw=true" />
+<img src="screenshots/http-api-app-enable.png?raw=true" width="200" />
 
-Oder gleich alle API keys auf einmal (höhere Last am System, viel traffic, sollte nicht für den Dauerbetrieb benutzt werden):
+### Alle Werte auf einmal abfragen
+<small>höhere Last am System, viel traffic, sollte nicht für den Dauerbetrieb benutzt werden</small>
 
 `http://192.168.0.75/api/status`
 
 <img src="screenshots/http-api-status.png?raw=true" />
 
-API Werte setzen:
+### Vereinzelte Werte abfragen​
+Ab 051.4:
 
-Example urls mit keys aus der Tabelle unten:
+`http://192.168.0.75/api/status?filter=rfb,alw,acu,adi,amp`
+
+Bis 051.3 (legacy):
+<small>Achtung, beim JSON parsen ging häufig der Speicher aus und es waren nie mehr als ca. 10 parameter möglich</small>
+
+`http://192.168.0.75/api/status?filter=["rfb","alw","acu","adi","amp"]`
+
+<img src="screenshots/http-api-status-filtered.png?raw=true" />
+
+### Werte setzen
 
 ```
 http://192.168.0.75/api/set?fna="mein charger"
