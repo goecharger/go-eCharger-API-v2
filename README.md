@@ -137,3 +137,13 @@ TODO erklärung wie mqtt einzuschalten und zu bedienen.
 | trx        | R          | optional&lt;uint8&gt;        | Status        | transaction, null when no transaction, 0 when without card, otherwise cardIndex + 1 (1: 0. card, 2: 1. card, ...) |
 | fwv        | R          | string                       | Constant      | FW_VERSION                                                                          |
 | arv        | R          | string                       | Constant      | app recommended version (used to show in the app that the app is outdated)          |
+| ccu        | R          | optional&lt;object&gt;       | Status        | charge controller update progress (null if no update is in progress)                |
+| oem        | R          | string                       | Constant      | OEM manufacturer                                                                    |
+| typ        | R          | string                       | Constant      | Devicetype                                                                          |
+| fwc        | R          | string                       | Constant      | firmware from CarControl                                                            |
+| apd        | R          | object                       | Constant      | firmware description                                                                |
+| otap       | R          | optional&lt;object&gt;       | Constant      | currently used OTA partition                                                        |
+| part       | R          | array                        | Constant      | partition table                                                                     |
+| pto        | R          | uint32                       | Constant      | partition table offset in flash                                                     |
+| lse        | R/W        | bool                         | Config        | led_save_energy                                                                     |
+| cdi        | R          | object                       | Status        | charging duration info (null=no charging in progress, type=0 counter going up, type=1 duration in ms) |
