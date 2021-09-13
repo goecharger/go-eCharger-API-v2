@@ -181,3 +181,16 @@ TODO erklärung wie mqtt einzuschalten und zu bedienen.
 | mcpd       | R/W        | milliseconds                 | Config        | minChargePauseDuration in milliseconds (0 means disabled)                           |
 | mcpea      | R/W        | optional&lt;milliseconds&gt; | Status        | minChargePauseEndsAt (set to null to abort current minChargePauseDuration)          |
 | su         | R/W        | bool                         | Config        | simulateUnplugging                                                                  |
+| hws        | R/W        | bool                         | Config        | httpStaReachable, defines if the local webserver should be reachable from the customers WiFi |
+| hsa        | R/W        | bool                         | Config        | httpStaAuthentication                                                               |
+| var        | R          | uint8                        | Constant      | variant: max Ampere value of unit (11: 11kW/16A, 22: 22kW/32A)                      |
+| loe        | R/W        | bool                         | Config        | Load balancing enabled                                                              |
+| log        | R/W        | string                       | Config        | load_group_id                                                                       |
+| lop        | R/W        | uint16                       | Config        | load_priority                                                                       |
+| lof        | R/W        | uint8                        | Config        | load_fallback                                                                       |
+| map        | R/W        | array                        | Config        | load_mapping (uint8_t[3])                                                           |
+| upo        | R/W        | bool                         | Config        | unlock_power_outage                                                                 |
+| pwm        | R          | uint8                        | Status        | phase wish mode for debugging / only for pv optimizing / used for timers later (Force_3=0, Wish_1=1, Wish_3=2) |
+| lfspt      | R          | optional&lt;milliseconds&gt; | Status        | last force single phase toggle                                                      |
+| fsptws     | R          | optional&lt;milliseconds&gt; | Status        | force single phase toggle wished since                                              |
+| spl3       | R/W        | float                        | Config        | threePhaseSwitchLevel                                                               |
