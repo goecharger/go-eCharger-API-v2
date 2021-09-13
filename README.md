@@ -10,7 +10,7 @@ Die API v2 muss in der App erst aktiviert werden:
 
 Danach können vereinzelte API keys abgefragt werden:
 
-`http://192.168.0.75/api/status?filter=["rfb","alw","acu","adi","amp"]`
+`http://192.168.0.75/api/status?filter=rfb,alw,acu,adi,amp`
 
 <img src="screenshots/http-api-status-filtered.png?raw=true" />
 
