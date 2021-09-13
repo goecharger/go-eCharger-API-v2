@@ -131,3 +131,4 @@ TODO erklärung wie mqtt einzuschalten und zu bedienen.
 | trx        | R          | optional&lt;uint8&gt;        | Status        | transaction, null when no transaction, 0 when without card, otherwise cardIndex + 1 (1: 0. card, 2: 1. card, ...) |
 | fwv        | R          | string                       | Constant      | FW_VERSION                                                                          |
 | arv        | R          | string                       | Constant      | app recommended version (used to show in the app that the app is outdated)          |
+| psm        | R/W        | uint8                        | Config        | configured phases (1 = 1 Phase, 2 = 3 Phases                                        |
