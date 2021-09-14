@@ -2,18 +2,20 @@ Deutsch &bull; [English](http-en.md)
 
 # HTTP Api
 
-Die HTTP API (v2) muss in der App erst aktiviert werden:
+[Die API Keys](apikeys-de.md) können über die HTTP Api gelesen und geschrieben werdenö
+
+Dafür muss die HTTP API (v2) in der App erst aktiviert werden:
 
 <img src="screenshots/http-api-app-enable.png?raw=true" width="200" />
 
-### Alle Werte auf einmal abfragen
+## Alle Werte auf einmal abfragen
 <small>höhere Last am System, viel traffic, sollte nicht für den Dauerbetrieb benutzt werden</small>
 
 `http://192.168.0.75/api/status`
 
 <img src="screenshots/http-api-status.png?raw=true" />
 
-### Vereinzelte Werte abfragen
+## Vereinzelte Werte abfragen
 Um die erhöhte Last zu reduzieren, kann die Status Anfrage so gefiltert werden, dass nur bestimmte Api Keys in der Response vor kommen.
 Ab Firmware 051.4:
 
@@ -26,7 +28,7 @@ Bis Firmware 051.3 (legacy):
 
 <img src="screenshots/http-api-status-filtered.png?raw=true" />
 
-### Werte setzen
+## Werte setzen
 Jeder zu setzende api wert muss als Url Query parameter (GET Parameter) mitgegeben werden. Der Wert muss dabei als JSON encodiert werden. Bei Strings zB dürfen die Anführungszeichen davor und danach nicht fehlen.
 
 ```
