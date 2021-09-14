@@ -4,13 +4,13 @@ Deutsch &bull; [English](apikeys-en.md)
 
 | Key        | R/W        | Type                         | Category      | Description                                                                         |
 | ---------- | ---------- | ---------------------------- | ------------- | ----------------------------------------------------------------------------------- |
-| mod        | R          | uint8                        | Constant      | Module hardware pcb version (0, 1, ...)                                             |
-| rfb        | R          | int                          | Status        | relay feedback                                                                      |
-| alw        | R          | bool                         | Status        | Is the car allowed to charge at all now?                                            |
-| acu        | R          | int                          | Status        | How many ampere is the car allowed to charge now?                                   |
-| adi        | R          | bool                         | Status        | Is the 16A adapter used? Limits the current to 16A                                  |
-| dwo        | R/W        | optional&lt;double&gt;       | Config        | energy limit, measured in Wh, null means disabled, not the next trip energy         |
-| tpa        | R          | float                        | Status        | 30 seconds total power average used to get better next-trip predictions             |
+| mod        | R          | uint8                        | Constant      | Modul hardware pcb version (0, 1, ...)                                              |
+| rfb        | R          | int                          | Status        | Relay Feedback                                                                      |
+| alw        | R          | bool                         | Status        | Darf das Auto derzeit laden?                                                        |
+| acu        | R          | int                          | Status        | Mit wie vielen Ampere darf das Auto derzeit laden?                                  |
+| adi        | R          | bool                         | Status        | Wird der 16A Adapter benutzt? Limitiert den Ladestrom auf 16A                       |
+| dwo        | R/W        | optional&lt;double&gt;       | Config        | Lade Energy Limit, gemessen in Wh, null bedeutet deaktiviert, nicht mit der next trip energie zu verwechseln |
+| tpa        | R          | float                        | Status        | 30 Sekunden Gesamtleistungsdurchschnitt (wird für genauere next-trip vorhersagen berechnet) |
 | sse        | R          | string                       | Constant      | serial number                                                                       |
 | eto        | R          | uint64                       | Status        | energy_total, measured in Wh                                                        |
 | etop       | R          | uint64                       | Status        | energy_total persisted, measured in Wh, without the extra magic to have live values |
