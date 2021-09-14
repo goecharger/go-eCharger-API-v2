@@ -2,7 +2,7 @@ Deutsch &bull; [English](http-en.md)
 
 # HTTP Api
 
-[Die API Keys](apikeys-de.md) können über die HTTP Api gelesen und geschrieben werdenö
+[Die API Keys](apikeys-de.md) können über die HTTP Api gelesen und geschrieben werden.
 
 Dafür muss die HTTP API (v2) in der App erst aktiviert werden:
 
