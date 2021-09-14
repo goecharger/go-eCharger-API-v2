@@ -1,3 +1,5 @@
+Deutsch &bull; [English](http-en.md)
+
 # HTTP Api
 
 Die HTTP API (v2) muss in der App erst aktiviert werden:

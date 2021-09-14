@@ -1,3 +1,5 @@
+[Deutsch](apikeys-de.md) &bull; English
+
 # API Keys
 
 | Key        | R/W        | Type                         | Category      | Description                                                                         |

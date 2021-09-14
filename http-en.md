@@ -1,3 +1,5 @@
+[Deutsch](http-de.md) &bull; English
+
 # HTTP Api
 
 The HTTP API (v2) has to be enabled from the app:
