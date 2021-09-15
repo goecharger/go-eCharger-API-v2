@@ -48,7 +48,7 @@ $ mosquitto_sub -v -t '/go-eCharger/#' | grep -P '/(?:alw|acu|fwv|rbt) '
 
 **Achtung:** Seit Firmware 051.5 muss das Setzen von Werten über MQTT extra erlaubt werden (siehe Screenshot oben).
 
-Dem Topic muss noch ein `/set` hinten angefügt werden, damit es für andere MQTT Teilnehmer keine Verwechslungen gibt zwischen der Anfrage einen Wert zu Ändern und dem tatsächlich geltenden Wert, ausgesendet vom Charger. Nachdem der Charger den Befehl erhalten hat, wird eine (nicht persistente) Antwort am Topic mit `/result` angestellt gesendet.
+Dem Topic muss noch ein `/set` hinten angefügt werden, damit es für andere MQTT Teilnehmer keine Verwechslungen gibt zwischen der Anfrage einen Wert zu Ändern und dem tatsächlich geltenden Wert, ausgesendet vom Charger. **Seit Firmware 051.5** wird, nachdem der Charger den Befehl erhalten hat, eine (nicht persistente) Antwort am Topic mit `/result` angestellt gesendet.
 
 Beispiele:
 
@@ -65,7 +65,7 @@ $ mosquitto_pub -t "/go-eCharger/00000002/fna/set" -m "0"
 $ mosquitto_pub -t "/go-eCharger/00000002/fna/set" -m "\"mein charger\""
 ```
 
-Mit den jeweiligen Antworten dazu:
+Mit den jeweiligen Antworten dazu (seit Firmware 051.5):
 
 ```
 $ mosquitto_sub -v -t "/go-eCharger/00000002/#" | grep /fna
