@@ -7,6 +7,8 @@ Grundsätzliches: Es gibt ein [set an api keys](apikeys-de.md), die über [die H
 
 Die Ladelogik wird einmal pro Sekunde evaluiert. Die Einstellungs-Parameter und das letzte Logik-Ergebnis sind unter anderem als API Keys abgebildet. Wenn Einstellungen geändert werden, die das Ladeverhalten beinflussen, kann es bis zu einer Sekunde dauern, bis das neue erwartete Ergebnis im Status sichtbar wird.
 
+## [Api Keys](apikeys-de.md)
+
 ## [HTTP Api](http-de.md)
 
 ## [MQTT](mqtt-de.md)
