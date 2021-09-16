@@ -150,3 +150,33 @@ Deutsch &bull; [English](apikeys-en.md)
 | lfspt      | R          | optional&lt;milliseconds&gt; | Status        | last force single phase toggle                                                      |
 | fsptws     | R          | optional&lt;milliseconds&gt; | Status        | force single phase toggle wished since                                              |
 | spl3       | R/W        | float                        | Config        | threePhaseSwitchLevel                                                               |
+| oct        | W          | string                       | Other         | firmware update trigger (must specify a branch from ocu)                            |
+| ocu        | R          | array                        | Status        | list of available firmware branches                                                 |
+| ocuca      | R          | bool                         | Config        | ota cloud use client auth (if keys were setup correctly)                            |
+| ocs        | R          | uint8                        | Status        | ota from cloud status (Idle=0, Updating=1, Failed=2, Succeeded=3)                   |
+| ocp        | R          | int                          | Status        | ota from cloud progress                                                             |
+| ocm        | R          | string                       | Status        | ota from cloud message                                                              |
+| ocl        | R          | optional&lt;int&gt;          | Status        | ota from cloud length (total size)                                                  |
+| oca        | R          | optional&lt;object&gt;       | Status        | ota cloud app description                                                           |
+| cwe        | R/W        | bool                         | Config        | cloud websocket enabled"                                                            |
+| cca        | R          | bool                         | Config        | cloud websocket use client auth (if key&amp;cert are setup correctly)               |
+| cws        | R          | bool                         | Status        | cloud websocket started                                                             |
+| cwsc       | R          | bool                         | Status        | cloud websocket connected                                                           |
+| cwsca      | R          | optional&lt;milliseconds&gt; | Status        | cloud websocket connected (age)                                                     |
+| cpe        | R          | bool                         | Status        | The charge ctrl requests the CP signal enabled or not immediately                   |
+| cpr        | R          | bool                         | Status        | CP enable request. cpd=0 triggers the charge ctrl to set cpe=0 once processed       |
+| cus        | R          | uint8                        | Status        | Cable unlock status (Unknown=0, Unlocked=1, UnlockFailed=2, Locked=3, LockFailed=4, LockUnlockPowerout=5) |
+| ffb        | R          | uint8                        | Status        | lock feedback (NoProblem=0, ProblemLock=1, ProblemUnlock=2)                         |
+| ffba       | R          | optional&lt;milliseconds&gt; | Status        | lock feedback (age)                                                                 |
+| fhz        | R          | optional&lt;float&gt;        | Status        | Stromnetz frequency (~50Hz) or 0 if unknown                                         |
+| rcd        | R          | optional&lt;microseconds&gt; | Status        | residual current detection (in microseconds) WILL CHANGE IN FUTURE                  |
+| onv        | R          | string                       | Status        | OverTheAirUpdate newest version                                                     |
+| lom        | R          | array                        | Status        | load balancing members                                                              |
+| loa        | R          | optional&lt;uint8&gt;        | Status        | load balancing ampere                                                               |
+| los        | R          | optional&lt;string&gt;       | Status        | load balancing status                                                               |
+| lot        | R/W        | uint32                       | Config        | load balancing total amp                                                            |
+| loty       | R/W        | uint8                        | Config        | load balancing type (Static=0, Dynamic=1)                                           |
+| wcch       | R          | uint8                        | Status        | webserver connected clients as HTTP                                                 |
+| wccw       | R          | uint8                        | Status        | webserver connected clients as WEBSOCKET                                            |
+| qsc        | R          | size_t                       | Status        | queue size cloud                                                                    |
+| qsw        | R          | size_t                       | Status        | queue size webserver/websocket                                                      |
