@@ -9,6 +9,8 @@ The Charging-logic will be executed once everey second. The settings parameters 
 
 ## [Api Keys](apikeys-en.md)
 
-## [HTTP Api](http-en.md)
+## [Local HTTP Api](http-en.md)
+
+## [Cloud HTTP Api](cloudapi-en.md)
 
 ## [MQTT](mqtt-en.md)
