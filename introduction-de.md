@@ -9,6 +9,8 @@ Die Ladelogik wird einmal pro Sekunde evaluiert. Die Einstellungs-Parameter und 
 
 ## [Api Keys](apikeys-de.md)
 
-## [HTTP Api](http-de.md)
+## [Lokale HTTP Api](http-de.md)
+
+## [Cloud HTTP Api](cloudapi-de.md)
 
 ## [MQTT](mqtt-de.md)
