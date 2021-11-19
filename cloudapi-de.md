@@ -29,12 +29,12 @@ Wobei **serial_number** durch die jeweilige 6-stellige Seriennummer des Chargers
 ### Authentifizierung
 Die Authentifizierung erfolgt entweder mittels GET Parameter oder durch senden des HTTP Headers **Authorization: Bearer**
 <pre>
-Authorization: Bearer <b>api-key</b>
+Authorization: Bearer <b>myapitoken</b>
 </pre>
 
 Falls die Authentifizierung mittels GET Parameter erfolgen soll, ist der Authentifizierungstoken als **token** Parameter anzugeben:
 <pre>
-https://<b>serial_number</b>.api.v3.go-e.io/api/status?token=<b>api-token</b>
+https://<b>serial_number</b>.api.v3.go-e.io/api/status?token=<b>myapitoken</b>
 </pre>
 
 
