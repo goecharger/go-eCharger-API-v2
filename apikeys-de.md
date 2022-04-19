@@ -63,7 +63,7 @@ Deutsch &bull; [English](apikeys-en.md)
 | rbc        | R          | uint32                       | Status        | reboot_counter                                                                      |
 | rbt        | R          | milliseconds                 | Status        | time since boot in milliseconds                                                     |
 | car        | R          | optional&lt;uint8&gt;        | Status        | carState, null if internal error (Unknown/Error=0, Idle=1, Charging=2, WaitCar=3, Complete=4, Error=5) |
-| err        | R          | optional&lt;uint8&gt;        | Status        | error, null if internal error (Unknown/Error=0, Idle=1, Charging=2, WaitCar=3, Complete=4, Error=5) |
+| err        | R          | optional&lt;uint8&gt;        | Status        | error, null if internal error (None = 0, FiAc = 1, FiDc = 2, Phase = 3, Overvolt = 4, Overamp = 5, Diode = 6, PpInvalid = 7, GndInvalid = 8, ContactorStuck = 9, ContactorMiss = 10, FiUnknown = 11, Unknown = 12, Overtemp = 13, NoComm = 14, StatusLockStuckOpen = 15, StatusLockStuckLocked = 16, Reserved20 = 20, Reserved21 = 21, Reserved22 = 22, Reserved23 = 23, Reserved24 = 24) |
 | cbl        | R          | optional&lt;int&gt;          | Status        | cable_current_limit in A                                                            |
 | pha        | R          | optional&lt;array&gt;        | Status        | phases                                                                              |
 | wh         | R          | double                       | Status        | energy in Wh since car connected                                                    |
