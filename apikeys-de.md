@@ -152,7 +152,4 @@ Deutsch &bull; [English](apikeys-en.md)
 | loa        | R          | optional&lt;uint8&gt;        | Status        | load balancing ampere                                                               |
 | lot        | R/W        | uint32                       | Config        | load balancing total amp                                                            |
 | loty       | R/W        | uint8                        | Config        | load balancing type (Static=0, Dynamic=1)                                           |
-<<<<<<< Updated upstream
-=======
-| cards      | R/W        | array                        | Config        |
->>>>>>> Stashed changes
+| cards      | R/W        | array                        | Config        |                                                                                     |

@@ -130,11 +130,7 @@
 | mcpea      | R/W        | optional&lt;milliseconds&gt; | Status        | minChargePauseEndsAt (set to null to abort current minChargePauseDuration)          |
 | su         | R/W        | bool                         | Config        | simulateUnpluggingShort                                                             |
 | sua        | R/W        | bool                         | Config        | simulateUnpluggingAlways                                                            |
-<<<<<<< Updated upstream
-| hsa        | W          | bool                         | Config        | httpStaAuthentication                                                               |
-=======
 | hsa        | R/W        | bool                         | Config        | httpStaAuthentication                                                               |
->>>>>>> Stashed changes
 | var        | R          | uint8                        | Constant      | variant: max Ampere value of unit (11: 11kW/16A, 22: 22kW/32A)                      |
 | loe        | R/W        | bool                         | Config        | Load balancing enabled                                                              |
 | log        | R/W        | string                       | Config        | load_group_id                                                                       |
@@ -156,8 +152,4 @@
 | loa        | R          | optional&lt;uint8&gt;        | Status        | load balancing ampere                                                               |
 | lot        | R/W        | uint32                       | Config        | load balancing total amp                                                            |
 | loty       | R/W        | uint8                        | Config        | load balancing type (Static=0, Dynamic=1)                                           |
-<<<<<<< Updated upstream
-| cards      | R/W        | array                        | Config        | 
-=======
-| cards      | R/W        | array                        | Config        | 
->>>>>>> Stashed changes
+| cards      | R/W        | array                        | Config        |                                                                                     |
