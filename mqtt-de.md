@@ -53,9 +53,11 @@ Dem Topic muss noch ein `/set` hinten angefügt werden, damit es für andere MQT
 Beispiele:
 
 ```
-/go-eCharger/00000001/alw/set
-/go-eCharger/00000001/alw/result
+/go-eCharger/00000001/frc/set
+/go-eCharger/00000001/frc/result
 ```
+
+wenn das `/set` topic auf 1 gesetzt wird, wird das Laden sofort gestoppt, wenn es auf 2 gesetzt wird, wird das Laden sofort erlaubt, 0 stellt wieder die ursprüngliche Logik her mit Scheduler, Awattar, Überschussladen und NextTrip.
 
 Mehr Beispiele:
 
