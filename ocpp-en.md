@@ -81,7 +81,48 @@ Example: http://192.168.0.77/api/set?ocppe=true&ocppu=ws://ocpp.server:1234/char
 
 The OCPP message `GetConfiguration` is used to retrieve a single or multiple config values from the charger. The OCPP message `ChangeConfiguration` is used to set or change a single or multiple config values on the charger.
 
-| Key        | R/W        | Type                         | Category      | Description |
-| ---------- | ---------- | ---------------------------- | ------------- | ---------------------------- |
-
-TODO
+| Configuration Key | Protocol Specification Chapter | go-eCharger support |
+| --- | --- | --- |
+| AllowOfflineTxForUnknownId | 9.1.1 |  |
+| AuthorizationCacheEnabled | 9.1.2 |  |
+| AuthorizeRemoteTxRequests | 9.1.3 |  |
+| BlinkRepeat | 9.1.4 |  |
+| ClockAlignedDataInterval | 9.1.5 | R/W |
+| ConnectionTimeOut | 9.1.6 |  |
+| ConnectorPhaseRotation | 9.1.7 | R |
+| ConnectorPhaseRotationMaxLength | 9.1.8 | R |
+| GetConfigurationMaxKeys | 9.1.9 | R |
+| HeartbeatInterval | 9.1.10 | R/W |
+| LightIntensity | 9.1.11 | R/W |
+| LocalAuthorizeOffline | 9.1.12 |  |
+| LocalPreAuthorize | 9.1.13 |  |
+| MaxEnergyOnInvalidId | 9.1.14 |  |
+| MeterValuesAlignedData | 9.1.15 |  |
+| MeterValuesAlignedDataMaxLength | 9.1.16 |  |
+| MeterValuesSampledData | 9.1.17 | R |
+| MeterValuesSampledDataMaxLength | 9.1.18 | R |
+| MeterValueSampleInterval | 9.1.19 | R/W |
+| MinimumStatusDuration | 9.1.20 |  |
+| NumberOfConnectors | 9.1.21 | R |
+| ResetRetries | 9.1.22 |  |
+| StopTransactionOnEVSideDisconnect | 9.1.23 |  |
+| StopTransactionOnInvalidId | 9.1.24 |  |
+| StopTxnAlignedData | 9.1.25 |  |
+| StopTxnAlignedDataMaxLength | 9.1.26 |  |
+| StopTxnSampledData | 9.1.27 |  |
+| StopTxnSampledDataMaxLength | 9.1.28 |  |
+| SupportedFeatureProfiles | 9.1.29 | R |
+| SupportedFeatureProfilesMaxLength | 9.1.30 | R |
+| TransactionMessageAttempts | 9.1.31 |  |
+| TransactionMessageRetryInterval | 9.1.32 |  |
+| UnlockConnectorOnEVSideDisconnect | 9.1.33 |  |
+| WebSocketPingInterval | 9.1.34 | R/W |
+| LocalAuthListEnabled | 9.2.1 |  |
+| LocalAuthListMaxLength | 9.2.2 |  |
+| SendLocalListMaxLength | 9.2.3 |  |
+| ReserveConnectorZeroSupported | 9.3.1 |  |
+| ChargeProfileMaxStackLevel | 9.4.1 | R |
+| ChargingScheduleAllowedChargingRateUnit | 9.4.2 | R |
+| ChargingScheduleMaxPeriods | 9.4.3 | R |
+| ConnectorSwitch3to1PhaseSupported | 9.4.4 | R |
+| MaxChargingProfilesInstalled | 9.4.5 | R |
