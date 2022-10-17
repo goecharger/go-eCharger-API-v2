@@ -153,3 +153,24 @@
 | lot        | R/W        | uint32                       | Config        | load balancing total amp                                                            |
 | loty       | R/W        | uint8                        | Config        | load balancing type (Static=0, Dynamic=1)                                           |
 | cards      | R/W        | array                        | Config        |                                                                                     |
+| ocppe   | R/W  | bool     | Config   | OCPP enabled                 |
+| ocppu   | R/W  | string   | Config   | OCPP server url              |
+| ocppg   | R/W  | bool     | Config   | OCPP use global CA Store     |
+| ocppcn  | R/W  | bool     | Config   | OCPP skipCertCommonNameCheck |
+| ocppss  | R/W  | bool     | Config   | OCPP skipServerVerification  |
+| ocpps   | R    | bool     | Status   | OCPP started                 |
+| ocppc   | R    | bool     | Status   | OCPP connected               |
+| ocppca  | R | null or milliseconds | Status | OCPP connected (timestamp in milliseconds since reboot) Subtract from reboot time (rbt) to get number of milliseconds since connected |
+| ocppa   | R    | bool      | Status   | OCPP connected and accepted |
+| ocppaa  | R | null or milliseconds | Status | OCPP connected and accepted (timestamp in milliseconds since reboot) Subtract from reboot time (rbt) to get number of milliseconds since connected |
+| ocpph   | R/W | seconds | Config | OCPP heartbeat interval (can also be read/written with `GetConfiguration` and `ChangeConfiguration`) |
+| ocpph   | R/W | seconds | Config | OCPP meter values sample interval (can also be read/written with `GetConfiguration` and `ChangeConfiguration`) |
+| ocpph   | R/W | seconds | Config | OCPP clock aligned data interval (can also be read/written with `GetConfiguration` and `ChangeConfiguration`) |
+| ocppd   | R/W | string | Config | OCPP dummy card id (used when no card has been used and charging is already allowed / starting) |
+| ocppr   | R/W  | bool    | Config   | OCPP rotate phases on charger |
+| ocpple  | R | string or null | Status | OCPP last error               |
+| ocpplea | R | null or milliseconds | Status | OCPP last error (timestamp in milliseconds since reboot) Subtract from reboot time (rbt) to get number of milliseconds since connected |
+| ocpprl  | R/W | bool | Config | OCPP remote logging (usually only enabled by go-e support to allow debugging) |
+| ocppck  | R/W  | string   | Config   | OCPP client key              |
+| ocppcc  | R/W  | string   | Config   | OCPP client cert             |
+| ocppsc  | R/W  | string   | Config   | OCPP server cert             |
