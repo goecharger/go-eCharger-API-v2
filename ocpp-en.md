@@ -35,16 +35,47 @@ Example: http://192.168.0.77/api/set?ocppe=true&ocppu=ws://ocpp.server:1234/char
 | ocppsc  | OCPP server cert             | string   | R/W  | Config   |
 
 ## Supported Feature Profiles
-| Feature Profile         | Support |
-| ----------------------- | ------- |
-| Core                    | |
-| FirmwareManagement      | |
-| LocalAuthListManagement | |
-| Reservation             | |
-| SmartCharging           | |
-| RemoteTrigger           | |
+| Feature Profile         | Support   |
+| ----------------------- | --------- |
+| Core                    | Supported |
+| FirmwareManagement      | Supported |
+| LocalAuthListManagement |           |
+| Reservation             |           |
+| SmartCharging           | Supported |
+| RemoteTrigger           | Supported |
 
-TODO
+## Supported Messages
+
+| Message                       | Profile                    | Support on go-eCharger |
+| ----------------------------- | -------------------------- | ----------- |
+| Authorize                     | Core                       | Implemented |
+| BootNotification              | Core                       | Implemented |
+| ChangeAvailability            | Core                       | |
+| ChangeConfiguration           | Core                       | Implemented (see supported config keys below) |
+| ClearCache                    | Core                       | |
+| DataTransfer                  | Core                       | |
+| GetConfiguration              | Core                       | Implemented (see supported config keys below) |
+| Heartbeat                     | Core                       | Implemented |
+| MeterValues                   | Core                       | Implemented |
+| RemoteStartTransaction        | Core                       | Implemented |
+| RemoteStopTransaction         | Core                       | Implemented |
+| Reset                         | Core                       | Implemented |
+| StartTransaction              | Core                       | Implemented |
+| StatusNotification            | Core                       | Implemented |
+| StopTransaction               | Core                       | Implemented |
+| UnlockConnector               | Core                       | Implemented |
+| GetDiagnostics                | Firmware Management        | |
+| DiagnosticsStatusNotification | Firmware Management        | |
+| FirmwareStatusNotification    | Firmware Management        | Implemented |
+| UpdateFirmware                | Firmware Management        | Implemented |
+| GetLocalListVersion           | Local Auth List Management | |
+| SendLocalList                 | Local Auth List Management | |
+| CancelReservation             | Reservation                | |
+| ReserveNow                    | Reservation                | |
+| ClearChargingProfile          | Smart Charging             | Implemented |
+| GetCompositeSchedule          | Smart Charging             | |
+| SetChargingProfile            | Smart Charging             | Implemented |
+| TriggerMessage                | Remote Trigger             | Implemented |
 
 ## Supported config keys in GetConfiguration and ChangeConfiguration
 
