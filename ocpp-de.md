@@ -4,7 +4,7 @@ Deutsch &bull; [English](ocpp-en.md)
 
 Neuere go-eCharger Firmwares unterstützen das Verbinden mit OCPP Backends. Die Entwicklung und Tests wurden mit [Steve](https://github.com/steve-community/steve) durchgeführt, ein OCPP Backend, welches sehr einfach zum aufsetzen und betreiben war (containerized und bare-metal auf Raspberry Pies und große Server). OCPP kann über die App oder die [http API](http-de.md) aktiviert werden.
 
-## Über die http API die OCPP Verbindung aktivieren
+## Über die http API die OCPP Verbindung aktivieren und prüfen
 
 Die Chargers verfügen über API Keys zum Konfigurieren und Prüfen der OCPP Verbindung. Diese API Keys können mit der http api verwendet werden.
 
