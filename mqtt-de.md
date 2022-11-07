@@ -8,6 +8,8 @@ Ein mqtt topic prefix wurde neulich implementiert, mit dem kann eingestellt werd
 
 ## Über die App die MQTT Verbindung aktivieren und prüfen
 
+Unten im Tab "Internet", dann "Erweiterte Einstelluingen" im Menü anwählen, dann ganz unten bei MQTT
+
 <img src="screenshots/mqtt-app-enable.png?raw=true" width="200" />
 
 **Warnung:** Verwenden Sie die voreingestellte test Broker url wirklich nur für kurze Tests und nicht im Dauerbetrieb, da der Charger sonst von Fremden aus dem Internet gesehen und gesteuert werden kann. Es kann das konfigurierte WLAN gelöscht oder auch ein Neustart veranlasst werden.

@@ -13,6 +13,10 @@ Die Ladelogik wird einmal pro Sekunde evaluiert. Die Einstellungs-Parameter und 
 
 ## [Cloud HTTP Api](cloudapi-de.md)
 
+## [Grid API](gridapi-de.md)
+
 ## [MQTT](mqtt-de.md)
 
 ## [OCPP](ocpp-de.md)
+
+## [Modbus](modbus-de.md)

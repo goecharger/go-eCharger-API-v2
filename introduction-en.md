@@ -13,6 +13,10 @@ The Charging-logic will be executed once every second. The settings parameters a
 
 ## [Cloud HTTP Api](cloudapi-en.md)
 
+## [Grid API](gridapi-en.md)
+
 ## [MQTT](mqtt-en.md)
 
 ## [OCPP](ocpp-en.md)
+
+## [Modbus](modbus-en.md)

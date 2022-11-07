@@ -8,6 +8,8 @@ A mqtt topic prefix was implemented recently to change the topics that the charg
 
 ## Using the App to enable and verify the MQTT connection
 
+Tap the tab "Internet" at the bottom, then click on "Erweiterte Einstellungen" in the menu, then at the very bottom "MQTT"
+
 <img src="screenshots/mqtt-app-enable.png?raw=true" width="200" />
 
 **Warning:** Use the preconfigured test broker url only for short test sessions, as this opens an attack surface for strangers from the internet, who can also then delete wifi configs or restart the charger.

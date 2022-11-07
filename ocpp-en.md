@@ -4,6 +4,12 @@
 
 Recent go-eCharger firmwares support connecting to an OCPP backend. Most of our development and testing was done with [Steve](https://github.com/steve-community/steve), which was very easy to run containerized and bare-metal on raspberry pies and big servers. OCPP can be enabled using the App or the [http API](http-en.md).
 
+## Using the App to enable and verify the MQTT connection
+
+Tap the tab "Internet" at the bottom, then click on OCPP in the menu
+
+<img src="screenshots/ocpp-app-enable.png?raw=true" width="200" />
+
 ## Using the http API to enable and verify the OCPP connection
 
 The chargers provide api keys to configure and verify the ocpp connection. These api keys can be used with the http api.
