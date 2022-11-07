@@ -29,7 +29,7 @@ Beispiel: http://192.168.0.77/api/set?mce=true&mcu=mqtt://mqtt.server:1234/
 | mqg     | MQTT use global CA Store     | bool     | R/W  | Config   |
 | mqcn    | MQTT skipCertCommonNameCheck | bool     | R/W  | Config   |
 | mqss    | MQTT skipServerVerification  | bool     | R/W  | Config   |
-| mcs     | MQTT gestarte                | bool     | R    | Status   |
+| mcs     | MQTT gestartet               | bool     | R    | Status   |
 | mcc     | MQTT verbunden               | bool     | R    | Status   |
 | mcca    | MQTT connected (Zeitstempel in Millisekunden seit dem Hochfahren) Subtrahiere von der reboot-zeit (rbt) um die Dauer seit Verbunden zu erhalten | null or milliseconds | R | Status |
 | mlr     | MQTT letzter error           | string or null | R | Status |
