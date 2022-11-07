@@ -8,7 +8,7 @@ A mqtt topic prefix was implemented recently to change the topics that the charg
 
 ## Using the App to enable and verify the MQTT connection
 
-Tap the tab "Internet" at the bottom, then click on "Erweiterte Einstellungen" in the menu, then at the very bottom "MQTT"
+Tap the tab "Internet" at the bottom, then click on "Advanced Settings" in the menu, then at the very bottom "MQTT"
 
 <img src="screenshots/mqtt-app-enable.png?raw=true" width="200" />
 
