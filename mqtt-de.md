@@ -45,30 +45,30 @@ Für jeden [API Keys](apikeys-de.md) veröffentlicht der Charger ein (persistent
 Beispiele:
 
 ```
-/go-eCharger/00000001/alw
-/go-eCharger/00000001/acu
-/go-eCharger/00000001/frc
+go-eCharger/00000001/alw
+go-eCharger/00000001/acu
+go-eCharger/00000001/frc
 ```
 
 Wenn mehrere go-e Charger am selben MQTT Server hängen, kann man mit MQTT wildcard queries einfach den aktuellesten Status alle Charger auflisten:
 
 ```
-$ mosquitto_sub -v -t '/go-eCharger/#' | grep -P '/(?:alw|acu|fwv|rbt) '
-/go-eCharger/00000001/alw true
-/go-eCharger/00000001/acu 16
-/go-eCharger/00000001/rbt 498429772
-/go-eCharger/00000001/fwv "35.6-1-ga0d44e5"
-/go-eCharger/00000004/alw true
-/go-eCharger/00000004/acu 16
-/go-eCharger/00000004/rbt 498008264
-/go-eCharger/00000004/fwv "35.6-2-g99a02ad"
-/go-eCharger/00000004/rbt 498009263
-/go-eCharger/00000001/rbt 498430770
-/go-eCharger/00000004/rbt 498010263
-/go-eCharger/00000001/rbt 498431770
-/go-eCharger/00000004/rbt 498011263
-/go-eCharger/00000001/rbt 498432770
-/go-eCharger/00000004/rbt 498012264
+$ mosquitto_sub -v -t 'go-eCharger/#' | grep -P '/(?:alw|acu|fwv|rbt) '
+go-eCharger/00000001/alw true
+go-eCharger/00000001/acu 16
+go-eCharger/00000001/rbt 498429772
+go-eCharger/00000001/fwv "35.6-1-ga0d44e5"
+go-eCharger/00000004/alw true
+go-eCharger/00000004/acu 16
+go-eCharger/00000004/rbt 498008264
+go-eCharger/00000004/fwv "35.6-2-g99a02ad"
+go-eCharger/00000004/rbt 498009263
+go-eCharger/00000001/rbt 498430770
+go-eCharger/00000004/rbt 498010263
+go-eCharger/00000001/rbt 498431770
+go-eCharger/00000004/rbt 498011263
+go-eCharger/00000001/rbt 498432770
+go-eCharger/00000004/rbt 498012264
 ^C
 ```
 
@@ -81,8 +81,8 @@ Dem Topic muss noch ein `/set` hinten angefügt werden, damit es für andere MQT
 Beispiele:
 
 ```
-/go-eCharger/00000001/frc/set
-/go-eCharger/00000001/frc/result
+go-eCharger/00000001/frc/set
+go-eCharger/00000001/frc/result
 ```
 
 wenn das `/set` topic auf 1 gesetzt wird, wird das Laden sofort gestoppt, wenn es auf 2 gesetzt wird, wird das Laden sofort erlaubt, 0 stellt wieder die ursprüngliche Logik her mit Scheduler, Awattar, Überschussladen und NextTrip.
@@ -90,21 +90,21 @@ wenn das `/set` topic auf 1 gesetzt wird, wird das Laden sofort gestoppt, wenn e
 Mehr Beispiele:
 
 ```
-$ mosquitto_pub -t "/go-eCharger/00000002/fna/set" -m "new_name"
-$ mosquitto_pub -t "/go-eCharger/00000002/fna/set" -m "0"
-$ mosquitto_pub -t "/go-eCharger/00000002/fna/set" -m "\"mein charger\""
+$ mosquitto_pub -t "go-eCharger/00000002/fna/set" -m "new_name"
+$ mosquitto_pub -t "go-eCharger/00000002/fna/set" -m "0"
+$ mosquitto_pub -t "go-eCharger/00000002/fna/set" -m "\"mein charger\""
 ```
 
 Mit den jeweiligen Antworten dazu (seit Firmware 051.5):
 
 ```
-$ mosquitto_sub -v -t "/go-eCharger/00000002/#" | grep /fna
-/go-eCharger/00000002/fna "go-echarger_00000002"
-/go-eCharger/00000002/fna/set new_name
-/go-eCharger/00000002/fna/result invalid json IncompleteInput: new_name
-/go-eCharger/00000002/fna/set 0
-/go-eCharger/00000002/fna/result value must be string 0
-/go-eCharger/00000002/fna/set "mein charger"
-/go-eCharger/00000002/fna/result success
-/go-eCharger/00000002/fna "mein charger"
+$ mosquitto_sub -v -t "go-eCharger/00000002/#" | grep /fna
+go-eCharger/00000002/fna "go-echarger_00000002"
+go-eCharger/00000002/fna/set new_name
+go-eCharger/00000002/fna/result invalid json IncompleteInput: new_name
+go-eCharger/00000002/fna/set 0
+go-eCharger/00000002/fna/result value must be string 0
+go-eCharger/00000002/fna/set "mein charger"
+go-eCharger/00000002/fna/result success
+go-eCharger/00000002/fna "mein charger"
 ```
