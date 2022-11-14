@@ -29,8 +29,8 @@ Example: http://192.168.0.77/api/set?ocppe=true&ocppu=ws://ocpp.server:1234/char
 | ocppa   | OCPP connected and accepted | bool      | R    | Status   |
 | ocppaa  | OCPP connected and accepted (timestamp in milliseconds since reboot) Subtract from reboot time (rbt) to get number of milliseconds since connected and accepted | null or milliseconds | R | Status |
 | ocpph   | OCPP heartbeat interval (can also be read/written with `GetConfiguration` and `ChangeConfiguration`) | seconds | R/W | Config |
-| ocpph   | OCPP meter values sample interval (can also be read/written with `GetConfiguration` and `ChangeConfiguration`) | seconds | R/W | Config |
-| ocpph   | OCPP clock aligned data interval (can also be read/written with `GetConfiguration` and `ChangeConfiguration`) | seconds | R/W | Config |
+| ocppi   | OCPP meter values sample interval (can also be read/written with `GetConfiguration` and `ChangeConfiguration`) | seconds | R/W | Config |
+| ocppai   | OCPP clock aligned data interval (can also be read/written with `GetConfiguration` and `ChangeConfiguration`) | seconds | R/W | Config |
 | ocppd   | OCPP dummy card id (used when no card has been used and charging is already allowed / starting) | string | R/W | Config |
 | ocppr   | OCPP rotate phases on charger | bool    | R/W  | Config   |
 | ocpple  | OCPP last error               | string or null | R | Status |
