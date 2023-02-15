@@ -39,4 +39,11 @@ http://192.168.0.75/api/set?dwo=3.14
 http://192.168.0.75/api/set?bac=false&sdp=true
 ```
 
-TODO für go-e: erwarteter Response Inhalt
+In der HTTP-Antwort sollte für jeden verarbeiteten Api-Key ein Ergebnis im JSON-Objekt sein, true wenn erfolgreich, oder ein string mit der Fehlermeldung.
+
+```
+{
+  "bac": true,
+  "sdp": true
+}
+```

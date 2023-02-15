@@ -40,4 +40,11 @@ http://192.168.0.75/api/set?dwo=3.14
 http://192.168.0.75/api/set?bac=false&sdp=true
 ```
 
-TODO for go-e: expected response content
+The HTTP response should contain a value for each api key in the json object, true for success, or a string error message.
+
+```
+{
+  "bac": true,
+  "sdp": true
+}
+```
