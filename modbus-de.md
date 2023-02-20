@@ -65,7 +65,7 @@ Beispiel: http://192.168.0.77/api/set?men=true
 
 ### Input Registers (read-only)
 
-| Register (wire-format)     | Bezeichnung     | Register Typ   | Datentyp | Länge | Beschreibung |
+| Register(wire-format)     | Bezeichnung     | Register Typ   | Datentyp | Länge | Beschreibung |
 | -------------------------- | --------------- | -------------- | -------- | ----- | - |
 | 40101 (100)                | CAR_STATE       | Input Register | uint16_t | 1     | **Status PWM Signalisierung**<br>0: unbekannt, Ladestation defekt<br>1: Ladestation bereit, kein Fahrzeug<br>2: Fahrzeug lädt<br>3: Warte auf Fahrzeug<br>4: Ladung beendet, Fahrzeug noch<br>verbunden |
 | 40102 (101)                | PP_CABLE        | Input Register | uint16_t | 1     | Typ2 **Kabel Ampere codierung**<br>13-32: Ampere Codierung<br>0: kein Kabel |
