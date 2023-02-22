@@ -89,7 +89,7 @@ The OCPP message `GetConfiguration` is used to retrieve a single or multiple con
 
 | Configuration Key | Protocol Specification Chapter | go-eCharger support |
 | --- | --- | --- |
-| AllowOfflineTxForUnknownId | 9.1.1 |  |
+| AllowOfflineTxForUnknownId | 9.1.1 | R/W |
 | AuthorizationCacheEnabled | 9.1.2 |  |
 | AuthorizeRemoteTxRequests | 9.1.3 |  |
 | BlinkRepeat | 9.1.4 |  |
@@ -100,7 +100,7 @@ The OCPP message `GetConfiguration` is used to retrieve a single or multiple con
 | GetConfigurationMaxKeys | 9.1.9 | R |
 | HeartbeatInterval | 9.1.10 | R/W |
 | LightIntensity | 9.1.11 | R/W |
-| LocalAuthorizeOffline | 9.1.12 |  |
+| LocalAuthorizeOffline | 9.1.12 | R/W |
 | LocalPreAuthorize | 9.1.13 |  |
 | MaxEnergyOnInvalidId | 9.1.14 |  |
 | MeterValuesAlignedData | 9.1.15 |  |
@@ -121,9 +121,9 @@ The OCPP message `GetConfiguration` is used to retrieve a single or multiple con
 | SupportedFeatureProfilesMaxLength | 9.1.30 | R |
 | TransactionMessageAttempts | 9.1.31 |  |
 | TransactionMessageRetryInterval | 9.1.32 |  |
-| UnlockConnectorOnEVSideDisconnect | 9.1.33 |  |
+| UnlockConnectorOnEVSideDisconnect | 9.1.33 | R/W |
 | WebSocketPingInterval | 9.1.34 | R/W |
-| LocalAuthListEnabled | 9.2.1 |  |
+| LocalAuthListEnabled | 9.2.1 | R/W |
 | LocalAuthListMaxLength | 9.2.2 |  |
 | SendLocalListMaxLength | 9.2.3 |  |
 | ReserveConnectorZeroSupported | 9.3.1 |  |
