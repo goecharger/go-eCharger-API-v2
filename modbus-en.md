@@ -60,8 +60,9 @@ Example: http://192.168.0.77/api/set?men=true
 | 30219 (218)            | NORWAY_MODE                 | Holding Register | uint16_t  | 1      | **Norway mode**​ activated<br>0: deactivated (ground detection <br> activated)<br>1: activated (no ground detection, <br>only intended for IT networks) |
 | 30300 (299)            | AMPERE_VOLATILE             | Holding Register | uint16_t  | 1      | Amps Value for the PWM<br>signaling in whole amps of<br>**6-32A**<br><br>Is not saved in the EEPROM <br> and is **reset** to the value last saved in the EEPROM during the next boot process.<br><br> For energy control |
 | 30301 (300)            | AMPERE_EEPROM               | Holding Register | uint16_t  | 1      | Amps Value for the PWM<br>signaling in whole amps of<br>**6-32A**<br><br>Is saved in the EEPROM (max. <br> write cycles approx. 100, 000)        |
-| 30333 (332)            | PHASE_SWITCH_MODE           | Holding Register | uint16_t  | 1      | Same as api key psm, only accepts values 0, 1, 2 |
-| 30334 (333)<br>30335 (334)<br>30336 (335)<br>30337 (336) | ENERGY_LIMIT | Holding Register | float64 | 4 | Same as api key dwo, set to float Inf to express "null" limit (disabled limit), or any other float in watthours (Wh)                 |
+| 30333 (332)            | PHASE_SWITCH_MODE           | Holding Register | uint16_t  | 1      | Same as api key psm, only accepts values 0, 1, 2 (Since Firmware 55.5) |
+| 30334 (333)<br>30335 (334)<br>30336 (335)<br>30337 (336) | ENERGY_LIMIT | Holding Register | float64 | 4 | Same as api key dwo, set to float Inf to express "null" limit (disabled limit), or any other float in watthours (Wh)  (Since Firmware 55.5) |
+| 30336 (337)            | FORCE_STATE                 | Holding Register | uint16_t | 1     | Same as api key frc, only accepts values  0, 1, 2 (Since Firmware 55.6) |
 
 ### Input Registers (read-only)
 
@@ -98,4 +99,4 @@ Example: http://192.168.0.77/api/set?men=true
 | 315<br>316<br>317<br>318   | IP              | Input Register | ascii (8 byte)        | 4 | IP address of the go-eCharger, 1 byte per register                                                                   |
 | 319<br>320<br>321<br>322   | SUBNET          | Input Register | unsigned integer (64) | 4 | Subnet mask of the go-eCharger, 1 <br> byte per register                                                             |
 | 323<br>324<br>325<br>326   | GATEWAY         | Input Register | ascii (4 byte)        | 4 | Go-eCharger gateway, 1 byte per register                                                                             |
-| 40328 (327)<br>40329 (328)<br>40330 (329)<br>40331 (330)<br>40332 (331) | RFID_CARD | Input Register | binary (10 byte) | 5 | Last scanned RFID serial number, 4-byte and 7-byte long numbers will be filled with zeros at the end, 10-byte numbers already fill the 5 modbus register on its own |
+| 40328 (327)<br>40329 (328)<br>40330 (329)<br>40331 (330)<br>40332 (331) | RFID_CARD | Input Register | binary (10 byte) | 5 | Last scanned RFID serial number, 4-byte and 7-byte long numbers will be filled with zeros at the end, 10-byte numbers already fill the 5 modbus register on its own (Since Firmware 55.5) |
