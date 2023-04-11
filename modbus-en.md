@@ -104,3 +104,13 @@ Data in this table can be read with modbus function 04.
 | 319<br>320<br>321<br>322   | SUBNET          | Input Register | unsigned integer (64) | 4 | Subnet mask of the go-eCharger, 1 <br> byte per register                                                             |
 | 30324 (323)<br>30325 (324)<br>30326 (325)<br>30327 (326) | GATEWAY | Input Register | ascii (4 byte) | 4 | Go-eCharger gateway, 1 byte per register                                                                             |
 | 30328 (327)<br>30329 (328)<br>30330 (329)<br>30331 (330)<br>30332 (331) | RFID_CARD | Input Register | binary (10 byte) | 5 | Last scanned RFID serial number, 4-byte and 7-byte long numbers will be filled with zeros at the end, 10-byte numbers already fill the 5 modbus register on its own (Since Firmware 55.5) |
+| 30333 (332)<br>30334 (333)<br>30335 (334)<br>30336 (335) | ENERGY_CARD0    | Input Register | double   | 4     | Energy on RFID Card 1 (in W) |
+| 30337 (336)<br>30338 (337)<br>30339 (338)<br>30340 (339) | ENERGY_CARD1    | Input Register | double   | 4     | Energy on RFID Card 2 (in W) |
+| 30341 (340)<br>30342 (341)<br>30343 (342)<br>30344 (343) | ENERGY_CARD2    | Input Register | double   | 4     | Energy on RFID Card 3 (in W) |
+| 30345 (344)<br>30346 (345)<br>30347 (346)<br>30348 (347) | ENERGY_CARD3    | Input Register | double   | 4     | Energy on RFID Card 4 (in W) |
+| 30349 (348)<br>30350 (349)<br>30351 (350)<br>30352 (351) | ENERGY_CARD4    | Input Register | double   | 4     | Energy on RFID Card 5 (in W) |
+| 30353 (352)<br>30354 (353)<br>30355 (354)<br>30356 (355) | ENERGY_CARD5    | Input Register | double   | 4     | Energy on RFID Card 6 (in W) |
+| 30357 (356)<br>30358 (357)<br>30359 (358)<br>30360 (359) | ENERGY_CARD6    | Input Register | double   | 4     | Energy on RFID Card 7 (in W) |
+| 30361 (360)<br>30362 (361)<br>30363 (362)<br>30364 (363) | ENERGY_CARD7    | Input Register | double   | 4     | Energy on RFID Card 8 (in W) |
+| 30365 (364)<br>30366 (365)<br>30367 (366)<br>30368 (367) | ENERGY_CARD8    | Input Register | double   | 4     | Energy on RFID Card 9 (in W) |
+| 30369 (368)<br>30370 (369)<br>30371 (370)<br>30372 (371) | ENERGY_CARD9    | Input Register | double   | 4     | Energy on RFID Card 10 (in W) |
