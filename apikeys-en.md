@@ -40,8 +40,8 @@
 | lmo        | R/W        | uint8                        | Config        | logic mode (Default=3, Awattar=4, AutomaticStop=5)                                  |
 | ama        | R/W        | uint8                        | Config        | ampere_max limit                                                                    |
 | clp        | R/W        | array                        | Config        | current limit presets, max. 5 entries                                               |
-| bac        | R/W        | bool                         | Config        | Button allow Current change                                                         |
-| sdp        | R/W        | bool                         | Config        | Button Allow Force change                                                           |
+| bac        | R/W        | uint8_t                      | Config        | Button allow Current change (0=AlwaysLock, 1=LockWhenCarIsConnected, 2=LockWhenCarIsCharging, 3=NeverLock) |
+| sdp        | R/W        | uint8_t                      | Config        | Button Allow Force change (0=AlwaysLock, 1=LockWhenCarIsConnected, 2=LockWhenCarIsCharging, 3=NeverLock) |
 | lbp        | R          | milliseconds                 | Status        | lastButtonPress in milliseconds                                                     |
 | amp        | R/W        | uint8                        | Config        | requestedCurrent in Ampere, used for display on LED ring and logic calculations     |
 | fna        | R/W        | string                       | Config        | friendlyName                                                                        |
