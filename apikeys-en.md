@@ -101,6 +101,7 @@
 | cco        | R/W        | double                       | Config        | car consumption (only stored for app)                                               |
 | esk        | R/W        | bool                         | Config        | energy set kwh (only stored for app)                                                |
 | fzf        | R/W        | bool                         | Config        | zeroFeedin                                                                          |
+| pgt        | R/W        | float                        | Config        | pGridTarget in W                                                                    |
 | sh         | R/W        | float                        | Config        | stopHysteresis in W                                                                 |
 | psh        | R/W        | float                        | Config        | phaseSwitchHysteresis in W                                                          |
 | po         | R/W        | float                        | Config        | prioOffset in W                                                                     |
