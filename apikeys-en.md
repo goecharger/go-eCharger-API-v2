@@ -153,7 +153,7 @@
 | loa        | R          | optional&lt;uint8&gt;        | Status        | load balancing ampere                                                               |
 | lot        | R/W        | uint32                       | Config        | load balancing total amp                                                            |
 | loty       | R/W        | uint8                        | Config        | load balancing type (Static=0, Dynamic=1)                                           |
-| cards      | R/W        | array                        | Config        |                                                                                     |
+| cards      | R/W        | array                        | Config        | array of user data (name, energy used, activation state)                            |
 | ocppe   | R/W  | bool     | Config   | OCPP enabled                 |
 | ocppu   | R/W  | string   | Config   | OCPP server url              |
 | ocppg   | R/W  | bool     | Config   | OCPP use global CA Store     |
