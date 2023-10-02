@@ -55,7 +55,7 @@ Deutsch &bull; [English](apikeys-en.md)
 | sch_satur  | R/W        | object                       | Config        | scheduler_saturday, control enum values: Disabled=0, Inside=1, Outside=2            |
 | sch_sund   | R/W        | object                       | Config        | scheduler_sunday, control enum values: Disabled=0, Inside=1, Outside=2              |
 | nmo        | R/W        | bool                         | Config        | norway_mode / ground check enabled when norway mode is disabled (inverted)          |
-| fsp        | R/W        | bool                         | Status        | force_single_phase (shows if currently single phase charge is enforced              |
+| fsp        | R          | bool                         | Status        | force_single_phase, this is only the result of the charging logic, if it wishes single force or not at the moment |
 | lrn        | W          | uint8                        | Other         | set this to 0-9 to learn last read card id                                          |
 | del        | W          | uint8                        | Other         | set this to 0-9 to clear card (erases card name, energy and rfid id)                |
 | acs        | R/W        | uint8                        | Config        | access_control user setting (Open=0, Wait=1)                                        |
