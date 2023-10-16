@@ -91,7 +91,7 @@ Die OCPP Message `GetConfiguration` wird verwendet, um einzelne oder gleich mehr
 | --- | --- | --- |
 | AllowOfflineTxForUnknownId | 9.1.1 | R/W |
 | AuthorizationCacheEnabled | 9.1.2 |  |
-| AuthorizeRemoteTxRequests | 9.1.3 |  |
+| AuthorizeRemoteTxRequests | 9.1.3 | R |
 | BlinkRepeat | 9.1.4 |  |
 | ClockAlignedDataInterval | 9.1.5 | R/W |
 | ConnectionTimeOut | 9.1.6 |  |
