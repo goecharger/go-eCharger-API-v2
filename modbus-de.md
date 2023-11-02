@@ -82,8 +82,8 @@ Daten in dieser Tabelle können mit der Modbus Funktion 04 gelesen werden.
 | 114<br>115                 | AMP_L1          | Input Register | uint32_t | 2     | Ampere auf L1 in 0.1A (123 entspricht 12, 3A) |
 | 116<br>117                 | AMP_L2          | Input Register | uint32_t | 2     | Ampere auf L2 in 0.1A (123 entspricht 12, 3A) |
 | 118 <br>119                | AMP_L3          | Input Register | uint32_t | 2     | Ampere auf L3 in 0.1A (123 entspricht 12, 3A) |
-| 120<br>121                 | POWER_TOTAL     | Input Register | uint32_t | 2     | Leistung gesamt in 0.01kW (360 entspricht 3, 6kW) |
-| 128 <br>129                | ENERGY_TOTAL    | Input Register | uint32_t | 2     | Gesamt geladene Energiemenge in 0.1kWh |
+| 120<br>121                 | POWER_TOTAL     | Input Register | uint32_t | 2     | Leistung gesamt in 0.01W (360000 entspricht 3,6kW) |
+| 128 <br>129                | ENERGY_TOTAL    | Input Register | uint32_t | 2     | Gesamt geladene Energiemenge in 0.1kWh (360 entspricht 36kWh) |
 | 132<br>133                 | ENERGY_CHARGE   | Input Register | uint32_t | 2     | **Geladene Energiemenge** in<br>Deka-Watt-Sekunden<br>Beispiel:100’000 bedeutet, 1’000’000<br>Ws (=277Wh = 0, 277kWh) wurden in<br>diesem Ladevorgang geladen. |
 | 144 <br>145                | VOLT_N          | Input Register | uint32_t | 2     | Spannung auf N in Volt |
 | 146 <br>147                | POWER_L1        | Input Register | uint32_t | 2     | Leistung auf L1 in 0.1kW (36 entspricht 3, 6kW) |
