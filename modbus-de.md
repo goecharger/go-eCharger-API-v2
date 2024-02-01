@@ -13,7 +13,7 @@ Die go-eCharger bieten ein Modbus TCP Interface an, mit dem einige Leistungs- un
 | 05          | Force Single Coil         | Nein                                    |
 | 06          | Preset Single Register    | Nein                                    |
 | 15          | Force Multiple Coils      | Nein                                    |
-| 16          | Read Input Registers      | Ja, für alle Register unten aufgelistet |
+| 16          | Preset Multiple Registers | Ja, für alle Register unten aufgelistet |
 
 ## Über die App das Modbus Interface aktivieren und prüfen
 

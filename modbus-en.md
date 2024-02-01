@@ -13,7 +13,7 @@ The go-eCharger has a Modbus TCP Interface an which can be used to read some pow
 | 05          | Force Single Coil         | No                                  |
 | 06          | Preset Single Register    | No                                  |
 | 15          | Force Multiple Coils      | No                                  |
-| 16          | Read Input Registers      | Yes, for all registers listed below |
+| 16          | Preset Multiple Registers | Yes, for all registers listed below |
 
 ## Using the App to enable and verify the Modbus interface
 
