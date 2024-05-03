@@ -123,9 +123,9 @@ Deutsch &bull; [English](apikeys-en.md)
 | deltap     | R          | float                        | Status        | deltaP                                                                              |
 | pnp        | R          | uint8                        | Status        | numberOfPhases                                                                      |
 | deltaa     | R          | float                        | Other         | deltaA                                                                              |
-| pvopt_avergagePGrid | R | float                        | Status        | averagePGrid                                                                        |
-| pvopt_avergagePPV | R   | float                        | Status        | averagePPv                                                                          |
-| pvopt_avergagePAkku | R | float                        | Status        | averagePAkku                                                                        |
+| pvopt_averagePGrid | R  | float                        | Status        | averagePGrid                                                                        |
+| pvopt_averagePPv | R    | float                        | Status        | averagePPv                                                                          |
+| pvopt_averagePAkku | R  | float                        | Status        | averagePAkku                                                                        |
 | mci        | R/W        | milliseconds                 | Config        | minimumChargingInterval in milliseconds (0 means disabled)                          |
 | mcpd       | R/W        | milliseconds                 | Config        | minChargePauseDuration in milliseconds (0 means disabled)                           |
 | mcpea      | R/W        | optional&lt;milliseconds&gt; | Status        | minChargePauseEndsAt (set to null to abort current minChargePauseDuration)          |
