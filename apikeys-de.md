@@ -165,8 +165,8 @@ Deutsch &bull; [English](apikeys-en.md)
 | ocppa   | R    | bool      | Status   | OCPP connected and accepted |
 | ocppaa  | R | null or milliseconds | Status | OCPP connected and accepted (timestamp in milliseconds since reboot) Subtract from reboot time (rbt) to get number of milliseconds since connected |
 | ocpph   | R/W | seconds | Config | OCPP heartbeat interval (can also be read/written with `GetConfiguration` and `ChangeConfiguration`) |
-| ocpph   | R/W | seconds | Config | OCPP meter values sample interval (can also be read/written with `GetConfiguration` and `ChangeConfiguration`) |
-| ocpph   | R/W | seconds | Config | OCPP clock aligned data interval (can also be read/written with `GetConfiguration` and `ChangeConfiguration`) |
+| ocppi   | R/W | seconds | Config | OCPP meter values sample interval (can also be read/written with `GetConfiguration` and `ChangeConfiguration`) |
+| ocppai  | R/W | seconds | Config | OCPP clock aligned data interval (can also be read/written with `GetConfiguration` and `ChangeConfiguration`) |
 | ocppd   | R/W | string | Config | OCPP dummy card id (used when no card has been used and charging is already allowed / starting) |
 | ocppr   | R/W  | bool    | Config   | OCPP rotate phases on charger |
 | ocpple  | R | string or null | Status | OCPP last error               |
