@@ -54,7 +54,7 @@ Daten in dieser Tabelle können mit der Modbus Funktion 03 gelesen und mit der M
 | 40211 (210)            | ELECTRICITY_PRICES_ZONE     | Holding Register | uint16_t | 1     | Awattar Preiszone<br>0: Österreich<br>1: Deutschland |
 | 40212 (211)            | AMPERE_MAX                  | Holding Register | uint16_t | 1     | Absolute max. Ampere: Maximalwert<br>für Ampere Einstellung<br>Beispiel: 20 (Einstellung auf mehr als<br>20A in der App nicht möglich) |
 | 40213 (212)            | AMPERE_L1                   | Holding Register | uint16_t | 1     | Ampere Level 1 für Druckknopf am<br>Gerät.<br>6-32: Ampere Stufe aktiviert<br>0: Stufe deaktivert (wird übersprungen) |
-| 40214 (213)            | AMLERE_L2                   | Holding Register | uint16_t | 1     | Ampere Level 2 für Druckknopf am<br>Gerät.<br>6-32: Ampere Stufe aktiviert<br>0: Stufe deaktivert (wird übersprungen) |
+| 40214 (213)            | AMPERE_L2                   | Holding Register | uint16_t | 1     | Ampere Level 2 für Druckknopf am<br>Gerät.<br>6-32: Ampere Stufe aktiviert<br>0: Stufe deaktivert (wird übersprungen) |
 | 40215 (214)            | AMPERE_L3                   | Holding Register | uint16_t | 1     | Ampere Level 3 für Druckknopf am<br>Gerät.<br>6-32: Ampere Stufe aktiviert<br>0: Stufe deaktivert (wird übersprungen) |
 | 40216 (215)            | AMPERE_L4                   | Holding Register | uint16_t | 1     | Ampere Level 4 für Druckknopf am<br>Gerät.<br>6-32: Ampere Stufe aktiviert<br>0: Stufe deaktivert (wird übersprungen) |
 | 40217 (216)            | AMPERE_L5                   | Holding Register | uint16_t | 1     | Ampere Level 5 für Druckknopf am<br>Gerät.<br>6-32: Ampere Stufe aktiviert<br>0: Stufe deaktivert (wird übersprungen) |
