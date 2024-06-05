@@ -89,6 +89,7 @@
 | awp        | R/W        | float                        | Config        | awattarMaxPrice in ct                                                               |
 | awcp       | R          | optional&lt;object&gt;       | Status        | awattar current price                                                               |
 | ido        | R          | optional&lt;object&gt;       | Config        | Inverter data override                                                              |
+| ids        | R/W        | bool                         | Other         | PvSurPlus information. e.g.: {"pGrid": 1000., "pPv": 1400., "pAkku": 2000.} pGrid < 0 ==> feed grid, pAkku < 0 ==> load battery, pPv > 0 ==> PV production, pPv < 0 ==> standby. Needed all 5 seconds. Can be read back within 10 seconds after set. pPv und pAkku are optional |
 | frm        | R          | uint8                        | Config        | roundingMode PreferPowerFromGrid=0, Default=1, PreferPowerToGrid=2                  |
 | fup        | R/W        | bool                         | Config        | usePvSurplus                                                                        |
 | awe        | R/W        | bool                         | Config        | useAwattar                                                                          |

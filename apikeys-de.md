@@ -89,6 +89,7 @@ Deutsch &bull; [English](apikeys-en.md)
 | awp        | R/W        | float                        | Config        | awattarMaxPrice in ct                                                               |
 | awcp       | R          | optional&lt;object&gt;       | Status        | awattar current price                                                               |
 | ido        | R          | optional&lt;object&gt;       | Config        | Inverter data override                                                              |
+| ids        | R/W        | bool                         | Other         | PvSurPlus Information. z.b.: {"pGrid": 1000., "pPv": 1400., "pAkku": 2000.}  pGrid < 0 ==> Einspeisen, pAkku < 0 ==> Batterie laden, pPv > 0 ==> PV Produktion, pPv < 0 ==> Standby. Muß alle 5 Sekunden geschrieben werden. Kann bis 10 Sekunden nach Schreiben gelesen werden. pPv und pAkku sind optional |
 | frm        | R          | uint8                        | Config        | roundingMode PreferPowerFromGrid=0, Default=1, PreferPowerToGrid=2                  |
 | fup        | R/W        | bool                         | Config        | usePvSurplus                                                                        |
 | awe        | R/W        | bool                         | Config        | useAwattar                                                                          |
