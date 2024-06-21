@@ -47,7 +47,7 @@ Example: http://192.168.0.77/api/set?ocppe=true&ocppu=ws://ocpp.server:1234/char
 | FirmwareManagement      | Supported |
 | LocalAuthListManagement |           |
 | Reservation             |           |
-| SmartCharging           | Supported |
+| SmartCharging           | Supported (YES we also support numberOfPhases=1 for phase switching) |
 | RemoteTrigger           | Supported |
 
 ## Supported Messages
