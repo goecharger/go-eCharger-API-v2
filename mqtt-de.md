@@ -8,7 +8,7 @@ Ein mqtt topic prefix wurde neulich implementiert, mit dem kann eingestellt werd
 
 ## Über die App die MQTT Verbindung aktivieren und prüfen
 
-Unten im Tab "Internet", dann "Erweiterte Einstelluingen" im Menü anwählen, dann ganz unten bei MQTT
+Unten im Tab "Internet", dann "Erweiterte Einstellungen" im Menü anwählen, dann ganz unten bei MQTT
 
 <img src="screenshots/mqtt-app-enable.png?raw=true" width="200" />
 
