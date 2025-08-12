@@ -191,7 +191,6 @@
 | po         | R/W        | float                        | Config        | prioOffset in W                                                                     |
 | ppv        | R          | optional&lt;float&gt;        | Status        | pPv in W                                                                            |
 | psh        | R/W        | float                        | Config        | phaseSwitchHysteresis in W                                                          |
-| psm        | R/W        | uint8                        | Config        | phaseSwitchMode (Auto=0, Force_1=1, Force_3=2)                                      |
 | psmd       | R/W        | milliseconds                 | Config        | forceSinglePhaseDuration (in milliseconds)                                          |
 | pvopt_averagePAkku | R  | float                        | Status        | averagePAkku                                                                        |
 | pvopt_averagePGrid | R  | float                        | Status        | averagePGrid                                                                        |
