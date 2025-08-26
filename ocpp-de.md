@@ -40,6 +40,13 @@ Beispiel: http://192.168.0.77/api/set?ocppe=true&ocppu=ws://ocpp.server:1234/cha
 | ocppcc  | OCPP client cert              | string   | R/W  | Config    |
 | ocppsc  | OCPP server cert              | string   | R/W  | Config    |
 
+## Wie meldet sich der Charger am Backend?
+| Hardware Generation | Marketing Name   | Beispiel BootNotification |
+| V3                  | Home             | `{"chargePointVendor":"go-e","chargePointModel":"go-eCharger","chargePointSerialNumber":"123456","firmwareVersion":"59.4"}` |
+| V4                  | Gemini           | `{"chargePointVendor":"go-e","chargePointModel":"go-eCharger_V4","chargePointSerialNumber":"237512","firmwareVersion":"59.4"}` |
+| V5                  | Gemini 2.0 (LTE) | `{"chargePointVendor":"go-e","chargePointModel":"go-eCharger_V5","chargePointSerialNumber":"402564","firmwareVersion":"59.4"}` |
+| Pro                 | Pro              | `{"chargePointVendor":"go-e","chargePointModel":"go-eCharger_Pro","chargePointSerialNumber":"500107","firmwareVersion":"59.3-rc2"}` |
+
 ## Unterstützte Feature Profile
 | Feature Profil          | Unterstützung |
 | ----------------------- | ------------- |
