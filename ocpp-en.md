@@ -42,6 +42,7 @@ Example: http://192.168.0.77/api/set?ocppe=true&ocppu=ws://ocpp.server:1234/char
 
 ## How does the charger identify to the backend?
 | Hardware generation | Marketing name   | Example BootNotification |
+| ------------------- | ---------------- | ------------------------ |
 | V3                  | Home             | `{"chargePointVendor":"go-e","chargePointModel":"go-eCharger","chargePointSerialNumber":"123456","firmwareVersion":"59.4"}` |
 | V4                  | Gemini           | `{"chargePointVendor":"go-e","chargePointModel":"go-eCharger_V4","chargePointSerialNumber":"237512","firmwareVersion":"59.4"}` |
 | V5                  | Gemini 2.0 (LTE) | `{"chargePointVendor":"go-e","chargePointModel":"go-eCharger_V5","chargePointSerialNumber":"402564","firmwareVersion":"59.4"}` |
