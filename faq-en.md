@@ -2,7 +2,7 @@
 
 # FAQ
 
-## Hoe start a Transaktion in OCPP
+## How start a Transaktion in OCPP
 To Start the Transaction the used Request is RemoteStartTransaction.req.
 This Request should Contain:
 
@@ -24,4 +24,5 @@ the message contains an overall limit for the Charge Point. |
 
   
 Coming soon
+
 
