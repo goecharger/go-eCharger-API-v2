@@ -9,9 +9,9 @@ To Start the Transaction the used Request is RemoteStartTransaction.req.
 
 |FIELD NAME | FIELD TYPE | CARD | DESCRIPTION |
 | ----------- | ------------- | ---------- | ------------------------------------- |
-| connectorId | integer | 0..1 | Optional Number of the connector on which to start the transaction connectorId SHALL be > 0 |
-| idTag | IdToken | 1..1 | Required The identifier that Charge Point must use to start a transaction.
-| chargingProfile | ChargingProfile | 0..1 | Optional Charging Profile to be used by the Charge Point for the requested transaction ChargingProfilePurpose MUST be set to TxProfile |
+| connectorId | integer | 0..1 | Optional. Number of the connector on which to start the transaction connectorId SHALL be > 0 |
+| idTag | IdToken | 1..1 | Required. The identifier that Charge Point must use to start a transaction.
+| chargingProfile | ChargingProfile | 0..1 | Optional. Charging Profile to be used by the Charge Point for the requested transaction ChargingProfilePurpose MUST be set to TxProfile |
 
 A Request via RemoteStartTransaction containing chargingProfile is not yet implementet and as such a seperate Request has to be send with set charging Profile.
 
@@ -24,7 +24,7 @@ A Request via RemoteStartTransaction containing chargingProfile is not yet imple
 
 
   
-Coming soon
+
 
 
 
