@@ -4,42 +4,42 @@ Deutsch &bull; [English](apikeys-en.md)
 
 | Key        | R/W        | Type                         | Category      | Description                                                                         |
 | ---------- | ---------- | ---------------------------- | ------------- | ----------------------------------------------------------------------------------- |
-| acp        | R/W        | bool                         | Config        | allowChargePause (car compatiblity)                                                 |
-| acs        | R/W        | uint8                        | Config        | access_control user setting (Open=0, Wait=1)                                        |
+| acp        | R/W        | bool                         | Config        | Ladepause erlauben (car compatiblity)                                                 |
+| acs        | R/W        | uint8                        | Config        | Zugriffskontrolle Benutzer Einstellung (Open=0, Wait=1)                                        |
 | acu        | R          | int                          | Status        | Mit wie vielen Ampere darf das Auto derzeit laden?                                  |
 | adi        | R          | bool                         | Status        | Wird der 16A Adapter benutzt? Limitiert den Ladestrom auf 16A                       |
 | alw        | R          | bool                         | Status        | Darf das Auto derzeit laden?                                                        |
-| ama        | R/W        | uint8                        | Config        | ampere_max limit                                                                    |
-| amp        | R/W        | uint8                        | Config        | requestedCurrent in Ampere, used for display on LED ring and logic calculations     |
-| amt        | R          | int                          | Status        | temperatureCurrentLimit                                                             |
-| ara        | R/W        | bool                         | Config        | automatic stop remain in aWATTar                                                    |
-| ate        | R/W        | double                       | Config        | automatic stop energy in Wh                                                         |
-| atp        | R          | optional&lt;object&gt;       | Status        | nextTripPlanData (debug)                                                            |
-| att        | R/W        | seconds                      | Config        | automatic stop time in seconds since day begin, calculation: (hours*3600)+(minutes*60)+(seconds) |
-| awc        | R/W        | uint8                        | Config        | awattar country (Austria=0, Germany=1)                                              |
-| awcp       | R          | optional&lt;object&gt;       | Status        | awattar current price                                                               |
-| awe        | R/W        | bool                         | Config        | useAwattar                                                                          |
-| awp        | R/W        | float                        | Config        | awattarMaxPrice in ct                                                               |
-| bac        | R/W        | uint8_t                      | Config        | Button allow Current change (0=AlwaysLock, 1=LockWhenCarIsConnected, 2=LockWhenCarIsCharging, 3=NeverLock) |
-| car        | R          | optional&lt;uint8&gt;        | Status        | carState, null if internal error (Unknown/Error=0, Idle=1, Charging=2, WaitCar=3, Complete=4, Error=5) |
-| cards      | R/W        | array                        | Config        | array mit nuter karten daten (name, energiezähler, aktivierungsstatus)              |
-| cbl        | R          | optional&lt;int&gt;          | Status        | cable_current_limit in A                                                            |
-| cch        | R/W        | string                       | Config        | color_charging, format: #RRGGBB                                                     |
-| cco        | R/W        | double                       | Config        | car consumption (only stored for app)                                               |
-| ccrv       | R          | string                       | Constant      | chargectrl recommended version                                                      |
-| ccu        | R          | optional&lt;object&gt;       | Status        | charge controller update progress (null if no update is in progress)                |
-| ccw        | R          | optional&lt;object&gt;       | Status        | Currently connected WiFi                                                            |
-| cdi        | R          | object                       | Status        | charging duration info (null=no charging in progress, type=0 counter going up, type=1 duration in ms) |
-| cfi        | R/W        | string                       | Config        | color_finished, format: #RRGGBB                                                     |
-| cid        | R/W        | string                       | Config        | color_idle, format: #RRGGBB                                                         |
-| clp        | R/W        | array                        | Config        | current limit presets, max. 5 entries                                               |
-| cus        | R          | uint8                        | Status        | Cable unlock status (Unknown=0, Unlocked=1, UnlockFailed=2, Locked=3, LockFailed=4, LockUnlockPowerout=5) |
-| cwc        | R/W        | string                       | Config        | color_waitcar, format: #RRGGBB                                                      |
-| cwe        | R/W        | bool                         | Config        | cloud websocket enabled"                                                            |
-| del        | W          | uint8                        | Other         | set this to 0-9 to clear card (erases card name, energy and rfid id)                |
+| ama        | R/W        | uint8                        | Config        | Maximales Ampere limit                                                                    |
+| amp        | R/W        | uint8                        | Config        | Gewünschtes Limit in Ampere, genutzt für LED Ring darstellung und interen Logik abläufe     |
+| amt        | R          | int                          | Status        | Temperatur Strom Limit                                                             |
+| ara        | R/W        | bool                         | Config        | Automatischer Stop remain in aWATTar                                                    |
+| ate        | R/W        | double                       | Config        | Automatischer Stop, Energy in Wh                                                        |
+| atp        | R          | optional&lt;object&gt;       | Status        | nächster Trip Plan Daten (debug)                                                            |
+| att        | R/W        | seconds                      | Config        | Automatischer Stop in Sekunden nach Tagbeginn, calculation: (hours*3600)+(minutes*60)+(seconds) |
+| awc        | R/W        | uint8                        | Config        | awattar Land (Österreich=0, Deutschland=1)                                              |
+| awcp       | R          | optional&lt;object&gt;       | Status        | awattar Dezeitiger Preis                                                              |
+| awe        | R/W        | bool                         | Config        | nutze Awattar                                                                          |
+| awp        | R/W        | float                        | Config        | awattar MaxPreis in ct                                                               |
+| bac        | R/W        | uint8_t                      | Config        | Taster erlaubt Stromändernung (0=AlwaysLock, 1=LockWhenCarIsConnected, 2=LockWhenCarIsCharging, 3=NeverLock) |
+| car        | R          | optional&lt;uint8&gt;        | Status        | Zustand Fahrzeug, null wenn Interner Fehler (Unknown/Error=0, Idle=1, Charging=2, WaitCar=3, Complete=4, Error=5) |
+| cards      | R/W        | array                        | Config        | array mit Nutzer Karten Daten (Name, energiezähler, aktivierungsstatus)              |
+| cbl        | R          | optional&lt;int&gt;          | Status        | derzeitges Stromlimit des Kabels in A                                                            |
+| cch        | R/W        | string                       | Config        | LED-Ring Farbe beim Laden, format: #RRGGBB                                                     |
+| cco        | R/W        | double                       | Config        | Auto Leistungsaufnahme (only stored for app)                                               |
+| ccrv       | R          | string                       | Constant      | chargectrl Empfohlene Version                                                     |
+| ccu        | R          | optional&lt;object&gt;       | Status        | charge controller update Vortschritt (null wenn derzeit kein Update läuft)                |
+| ccw        | R          | optional&lt;object&gt;       | Status        | Derzeit verbundenes WiFi                                                            |
+| cdi        | R          | object                       | Status        | Ladedauer Info (null=no charging in progress, type=0 counter going up, type=1 duration in ms) |
+| cfi        | R/W        | string                       | Config        | LED-Ring Farbe Laden abgeschlossen, format: #RRGGBB                                                     |
+| cid        | R/W        | string                       | Config        | LED-Ring Farbe beim Warten, format: #RRGGBB                                                         |
+| clp        | R/W        | array                        | Config        | Stromlimit Einstellung, max. 5 entries                                               |
+| cus        | R          | uint8                        | Status        | Kabel Verschluss Status (Unknown=0, Unlocked=1, UnlockFailed=2, Locked=3, LockFailed=4, LockUnlockPowerout=5) |
+| cwc        | R/W        | string                       | Config        | LED-Ring Farbe beim warten auf Auto, format: #RRGGBB                                                      |
+| cwe        | R/W        | bool                         | Config        | cloud websocket eingeschalten                                                            |
+| del        | W          | uint8                        | Other         | Setzte die auf 0-9 um die RFID Karte zu löschen (Löscht Karten Name, Energie and RFID Id)                |
 | deltaa     | R          | float                        | Other         | deltaA                                                                              |
 | deltap     | R          | float                        | Status        | deltaP                                                                              |
-| delw       | W          | uint8                        | Other         | set this to 0-9 to delete sta config (erases ssid, key, ...)                        |
+| delw       | W          | uint8                        | Other         | setze dies auf 0-9 um die STA Daten zu löschen (erases ssid, key, ...)                        |
 | dns        | R          | object                       | Status        | DNS server                                                                          |
 | dwo        | R/W        | optional&lt;double&gt;       | Config        | Lade Energy Limit, gemessen in Wh, null bedeutet deaktiviert, nicht mit der Next-Trip Energie zu verwechseln |
 | err        | R          | optional&lt;uint8&gt;        | Status        | error, null if internal error (None = 0, FiAc = 1, FiDc = 2, Phase = 3, Overvolt = 4, Overamp = 5, Diode = 6, PpInvalid = 7, GndInvalid = 8, ContactorStuck = 9, ContactorMiss = 10, FiUnknown = 11, Unknown = 12, Overtemp = 13, NoComm = 14, StatusLockStuckOpen = 15, StatusLockStuckLocked = 16, Reserved20 = 20, Reserved21 = 21, Reserved22 = 22, Reserved23 = 23, Reserved24 = 24) |
