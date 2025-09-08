@@ -50,9 +50,10 @@ Um eine Stop Transaktions Anfrage zu senden muss RemoteStopTransaction.req. verw
 
   ### Konfiguration des physichen Tasters auf dem Ladepunkt
     https://000001.api.v3.go-e.io/api/set?token=myapitoken&clp=[6,10,12,14,16]
-TDer Taster wird verwendet um zwischen biszu 5 verschiedenen maximla Ladeströmen zu wechslen.
+Der Taster wird verwendet um zwischen bis zu 5 verschiedenen maximal Ladeströmen zu wechslen.
 
 |FELD NAME | R/W | TYP | KATEGORY | BESCHREIBUNG |
 | ----------- | ------------- | ------ | ---- | ------------------------------------- |
 | clp | R/W | array | Config | Derzeite Liste an Strömen, maximum 5 Einträge
+
 
