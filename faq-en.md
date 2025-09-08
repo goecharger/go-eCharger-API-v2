@@ -4,10 +4,10 @@
 
 # OCPP
 
-##[How to start the Connection](ocpp-en.md) 
+## [How to start the Connection](ocpp-en.md) 
 
 ## How start a Transaktion in OCPP with Authentication
-To Start the Transaction the used Request is RemoteStartTransaction.req.
+To send a Start Transaction the Request used is RemoteStartTransaction.req. With this the Charging will start.
 
 ### RemoteStartTransaction
 
@@ -26,8 +26,14 @@ A Request via RemoteStartTransaction containing chargingProfile is not yet imple
 | connectorId | integer | 1..1 | Required. The connector to which the charging profile applies. If connectorId = 0, the message contains an overall limit for the Charge Point. |
 | csChargingProfiles | ChargingProfile | 1..1 | Required. The charging profile to be set at the Charge Point.|
 
+To send a Stop Transaction the Request used ist RemoteStopTransaction.req. With this the Chargin will Stop
+|FIELD NAME | FIELD TYPE | CARD | DESCRIPTION |
+| ----------- | ------------- | ---------- | ------------------------------------- |
+| transactionId | integer |  1..1 | Required. The identifier of the transaction which Charge Point is requested to |
+
 
 # API 
+
 
 
 
