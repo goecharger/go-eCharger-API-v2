@@ -43,9 +43,9 @@ To send a Stop Transaction the Request used ist RemoteStopTransaction.req. With 
 ## [All API Keys in Use](apikeys-en.md)
 
 ## How to get started with API. 
-  ### [Cloud API verwenden](cloudapi-en.md)
-  ### [Grid API verwenden](gridapi-en.md)
-  ### [http API verwenden](http-en.md)
+  ### [Cloud API usage](cloudapi-en.md)
+  ### [Grid API usage](gridapi-en.md)
+  ### [http API usage](http-en.md)
 
   ### Configuring the Physical Button on the Charger.
     https://000001.api.v3.go-e.io/api/set?token=myapitoken&clp=[6,10,12,14,16]
@@ -54,6 +54,7 @@ THe Button is used to set the maximum Charging Amperage in a Set of 5 Values.
 |FIELD NAME | R/W | Type | Catergory | Description |
 | ----------- | ------------- | ------ | ---- | ------------------------------------- |
 | clp | R/W | array | Config | Current Limit Presets, maximum 5 Entries
+
 
 
 
