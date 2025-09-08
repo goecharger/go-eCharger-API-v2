@@ -40,7 +40,7 @@ To send a Stop Transaction the Request used ist RemoteStopTransaction.req. With 
 
 # API 
 
-## [All API Keys in Used](apikeys-en.md)
+## [All API Keys in Use](apikeys-en.md)
 
 ## How to get started with API. 
   ### [Cloud API verwenden](cloudapi-en.md)
@@ -54,6 +54,7 @@ THe Button is used to set the maximum Charging Amperage in a Set of 5 Values.
 |FIELD NAME | R/W | Type | Catergory | Description |
 | ----------- | ------------- | ------ | ---- | ------------------------------------- |
 | clp | R/W | array | Config | Current Limit Presets, maximum 5 Entries
+
 
 
 
