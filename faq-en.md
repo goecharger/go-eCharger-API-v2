@@ -48,10 +48,13 @@ To send a Stop Transaction the Request used ist RemoteStopTransaction.req. With 
   ### [http API verwenden](http-en.md)
 
   ### Configuring the Physical Button on the Charger.
-    The Button is used to set the maximum Charging Amperage in a Set of 5 Values.
+    https://000001.api.v3.go-e.io/api/set?token=myapitoken&clp=[6,10,12,14,16]
+THe Button is used to set the maximum Charging Amperage in a Set of 5 Values.
+
 |FIELD NAME | R/W | Type | Catergory | Description |
 | ----------- | ------------- | ------ | ---- | ------------------------------------- |
-| clp | R/W | array | Config | Current Limit Presets, maximum 5 Entries example : "[6,10,12,14,16]"
+| clp | R/W | array | Config | Current Limit Presets, maximum 5 Entries
+
 
 
 
