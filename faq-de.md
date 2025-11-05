@@ -41,7 +41,7 @@ Um eine Stop Transaktions Anfrage zu senden muss RemoteStopTransaction.req. verw
 
 # API 
 
-## [Alle API Keys in Verwendung](apikeys-de.md)
+## [Alle API Keys in Verwendung](aoukeys_Firmware_59.4_sorted.md)
 
 ## How to get started with API. 
   ### [Cloud API verwenden](cloudapi-de.md)
@@ -55,5 +55,6 @@ Der Taster wird verwendet um zwischen bis zu 5 verschiedenen maximal Ladeströme
 |FELD NAME | R/W | TYP | KATEGORY | BESCHREIBUNG |
 | ----------- | ------------- | ------ | ---- | ------------------------------------- |
 | clp | R/W | array | Config | Derzeite Liste an Strömen, maximum 5 Einträge
+
 
 
