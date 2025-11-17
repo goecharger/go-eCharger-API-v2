@@ -53,6 +53,7 @@
 |	 c9i        	|	 R/W        	|	 get: bool set: string        		|	 Config        	|	 9. rfid cards id                                                                    	|
 |	 c9n        	|	 R/W        	|	 string                       		|	 Config        	|	 9. rfid cards name                                                                  	|
 |	 car        	|	 R          	|	 optional<uint8_t>            		|	 Status        	|	 charge ctrl car state, null if no connection to chargectrl established (Unknown/Error=0, Idle=1, Charging=2, WaitCar=3, Complete=4, Error=5) 	|
+|	 cards      	|	 R/W        	|	 get: legacy set: JsonArray   		|	 Config        	|	 RFID cards array of objects, if you only want to change the second entry, send an array with 1 empty and 1 filled card config object: [{}, {"name":"","energy":"","rfid":""}] 	|
 |	 cbl        	|	 R          	|	 optional<int>                		|	 Status        	|	 cable_current_limit in A                                                            	|
 |	 ccd        	|	 R          	|	 legacy                       		|	 Status        	|	 Connected controller data                                                           	|
 |	 cch        	|	 R/W        	|	 string                       		|	 Config        	|	 color_charging, format: #RRGGBB                                                     	|
@@ -117,7 +118,6 @@
 |	 ids        	|	 W          	|	 optional<JsonObject>         		|	 Status        	|	 inverter data setter {"pGrid": 1000., "pPv": 1000., "pAkku": 1000.}                 	|
 |	 inva       	|	 R          	|	 optional<int64_t>            		|	 Status        	|	 age of inverter data                                                                	|
 |	 isgo       	|	 R          	|	 bool                         		|	 Constant      	|	 is go                                                                               	|
-|		|		|			|		|		|
 |	 la1        	|	 R/W        	|	 uint8_t                      		|	 Config        	|	 limit adapter 1-phase (in A)                                                        	|
 |	 la3        	|	 R/W        	|	 uint8_t                      		|	 Config        	|	 limit adapter 3-phase (in A)                                                        	|
 |	 lbp        	|	 R          	|	 optional<int64_t>            		|	 Config        	|	 lastButtonPress                                                                     	|
@@ -314,4 +314,4 @@
 |	 wsms       	|	 R          	|	 uint8_t                      		|	 Status        	|	 WiFi state machine state (None=0, Scanning=1, Connecting=2, Connected=3)            	|
 |	 wst        	|	 R          	|	 uint8_t                      		|	 Status        	|	 WiFi STA status (IDLE_STATUS=0, NO_SSID_AVAIL=1, SCAN_COMPLETED=2, CONNECTED=3, CONNECT_FAILED=4, CONNECTION_LOST=5, DISCONNECTED=6, CONNECTING=7, DISCONNECTING=8, NO_SHIELD=9, WAITING_FOR_IP=10 (for compatibility with WiFi Shield library)) 	|
 |	 zfo        	|	 R/W        	|	 float                        		|	 Config        	|	 zeroFeedinOffset in W                                                               	|
-<img width="1695" height="6321" alt="image" src="https://github.com/user-attachments/assets/f89a316f-146f-43d4-bf2d-7eca51ea44ac" />
+<img width="1629" height="6321" alt="image" src="https://github.com/user-attachments/assets/c619f72a-67dd-414d-bc0c-eeed93b7abfc" />
