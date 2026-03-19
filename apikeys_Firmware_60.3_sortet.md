@@ -90,55 +90,54 @@
 |	dsrc	|	R	|	optional<string>	|	Status	|	inverter data source	|
 |	dwo	|	R/W	|	optional<double>	|	Config	|	energy limit, measured in Wh, null means disabled, not the next trip energy	|
 |	emx	|	R/W	|	int32_t	|	Config	|	Energymix plugout afterglow in milliseconds.	|
-|	err	|	R	|	optional<uint8_t>	|	Status	|	charge ctrl error, null if no connection to charge ctrl established (None=0, F	iAc=1, FiDc=2, Phase=3, Overvolt=4, Overamp=5, Diode=6, PpInvalid=7, GndInvalid=8, ContactorStuck=9, ContactorMiss=10, StatusLockStuckOpen=12, StatusLockStuckLocked=13, FiUnknown=14, Unknown=15, Overtemp=16, NoComm=17, CpInvalid=18) |
-|	esk	|	R/W	|	bool	|	Config	|	energy set kwh (for app)	|
-|	eto	|	R	|	uint64_t	|	Status	|	energy_total, measured in Wh	|
+|	err		|	R	|	optional<uint8_t>	|	Status	|	charge ctrl error, null if no connection to charge ctrl established (None=0, F	iAc=1, FiDc=2, Phase=3, Overvolt=4, Overamp=5, Diode=6, PpInvalid=7, GndInvalid=8, ContactorStuck=9, ContactorMiss=10, StatusLockStuckOpen=12, StatusLockStuckLocked=13, FiUnknown=14, Unknown=15, Overtemp=16, NoComm=17, CpInvalid=18) |
+|	esk		|	R/W	|	bool	|	Config	|	energy set kwh (for app)	|
+|	eto		|	R	|	uint64_t	|	Status	|	energy_total, measured in Wh	|
 |	eto_mid	|	R	|	optional<uint64_t>	|	Status	|	MID energy_total, measured in Wh	|
-|	evt	|	R	|	optional<string>	|	Status	|	EVCMS transaction id	|
+|	evt		|	R	|	optional<string>	|	Status	|	EVCMS transaction id	|
 |	facacs	|	R	|	uint8_t	|	Config	|	factory access_control user setting (Open=0, Wait=1, EVCMS=2)	|
-|	fhz	|	R	|	optional<float>	|	Status	|	Stromnetz frequency (~50Hz) or 0 if unknown	|
-|	fmt	|	R/W	|	int32_t	|	Config	|	minChargeTime in milliseconds	|
-|	fna	|	R/W	|	string	|	Config	|	friendlyName	|
-|	frc	|	R/W	|	uint8_t	|	Config	|	forceState (Neutral=0, Off=1, On=2)	|
-|	frm	|	R/W	|	uint8_t	|	Config	|	roundingMode PreferPowerFromGrid=0, Default=1, PreferPowerToGrid=2	|
-|	fsp	|	R/W	|	bool	|	Status	|	force_single_phase	|
+|	fhz		|	R	|	optional<float>	|	Status	|	Stromnetz frequency (~50Hz) or 0 if unknown	|
+|	fmt		|	R/W	|	int32_t	|	Config	|	minChargeTime in milliseconds	|
+|	fna		|	R/W	|	string	|	Config	|	friendlyName	|
+|	frc		|	R/W	|	uint8_t	|	Config	|	forceState (Neutral=0, Off=1, On=2)	|
+|	frm		|	R/W	|	uint8_t	|	Config	|	roundingMode PreferPowerFromGrid=0, Default=1, PreferPowerToGrid=2	|
+|	fsp		|	R/W	|	bool	|	Status	|	force_single_phase	|
 |	fsptws	|	R	|	optional<int64_t>	|	Status	|	force single phase toggle wished since	|
-|	fst	|	R/W	|	float	|	Config	|	startingPower in watts	|
-|	fup	|	R/W	|	bool	|	Config	|	usePvSurplus	|
-|	fwv	|	R	|	string	|	Status	|	FW_VERSION	|
-|	fzf	|	R/W	|	bool	|	Config	|	zeroFeedin	|
+|	fst		|	R/W	|	float	|	Config	|	startingPower in watts	|
+|	fup		|	R/W	|	bool	|	Config	|	usePvSurplus	|
+|	fwv		|	R	|	string	|	Status	|	FW_VERSION	|
+|	fzf		|	R/W	|	bool	|	Config	|	zeroFeedin	|
 |	gmtr	|	R/W	|	int32_t	|	Config	|	gridMonitoringTimeReconnection in seconds	|
-|	gsa	|	R/W	|	optional<int64_t>	|	Status	|	gridMonitoring last failure	|
-|	hai	|	R/W	|	bool	|	Config	|	httpApiEnabled (allows /api/status and /api/set requests)	|
+|	gsa		|	R/W	|	optional<int64_t>	|	Status	|	gridMonitoring last failure	|
+|	hai		|	R/W	|	bool	|	Config	|	httpApiEnabled (allows /api/status and /api/set requests)	|
 |	host	|	R	|	string	|	Status	|	configured hostname	|
-|	hsa	|	W	|	bool	|	Config	|	httpStaAuthentication	|
-|	ids	|	W	|	optional<JsonObject>	|	Status	|	inverter data setter {"pGrid": 1000., "pPv": 1000., "pAkku": 1000.}	|
+|	hsa		|	W	|	bool	|	Config	|	httpStaAuthentication	|
+|	ids		|	W	|	optional<JsonObject>	|	Status	|	inverter data setter {"pGrid": 1000., "pPv": 1000., "pAkku": 1000.}	|
 |	inva	|	R	|	optional<int64_t>	|	Status	|	age of inverter data	|
-|	isgo	|	R	|	bool	|	Constant	|	is go	|
-										
-|	la1	|	R/W	|	uint8_t	|	Config	|	limit adapter 1-phase (in A)	|
-|	la3	|	R/W	|	uint8_t	|	Config	|	limit adapter 3-phase (in A)	|
-|	lbr	|	R/W	|	uint8_t	|	Config	|	led_bright, 0-255	|
+|	isgo	|	R	|	bool	|	Constant	|	is go	|										
+|	la1		|	R/W	|	uint8_t	|	Config	|	limit adapter 1-phase (in A)	|
+|	la3		|	R/W	|	uint8_t	|	Config	|	limit adapter 3-phase (in A)	|
+|	lbr		|	R/W	|	uint8_t	|	Config	|	led_bright, 0-255	|
 |	lccfc	|	R	|	optional<int64_t>	|	Status	|	lastCarStateChangedFromCharging (in ms)	|
 |	lccfi	|	R	|	optional<int64_t>	|	Status	|	lastCarStateChangedFromIdle (in ms)	|
 |	lcctc	|	R	|	optional<int64_t>	|	Status	|	lastCarStateChangedToCharging (in ms)	|
-|	lcs	|	R	|	int64_t	|	Status	|	last controller scan timestamp in milliseconds since boot time	|
-|	led	|	R	|	legacy	|	Status	|	LED animation	|
+|	lcs		|	R	|	int64_t	|	Status	|	last controller scan timestamp in milliseconds since boot time	|
+|	led		|	R	|	legacy	|	Status	|	LED animation	|
 |	lfspt	|	R	|	optional<int64_t>	|	Status	|	last force single phase toggle	|
-|	lmo	|	R/W	|	uint8_t	|	Config	|	logic mode (Default=3, Awattar=4, NextTrip=5)	|
+|	lmo		|	R/W	|	uint8_t	|	Config	|	logic mode (Default=3, Awattar=4, NextTrip=5)	|
 |	lmsc	|	R	|	int64_t	|	Status	|	last model status change	|
-|	loa	|	R	|	get: optional<uint8_t> set: u	i	nt8_t | Status		| load balancing ampere	|
-|	loc	|	R	|	string	|	Status	|	local time	|
-|	loe	|	R/W	|	bool	|	Config	|	Load balancing enabled	|
-|	lof	|	R/W	|	uint8_t	|	Config	|	load_fallback	|
-|	log	|	R/W	|	string	|	Config	|	load_group_id	|
-|	lop	|	R/W	|	uint16_t	|	Config	|	load_priority	|
+|	loa		|	R	|	get: optional<uint8_t> set: u	i	nt8_t | Status		| load balancing ampere	|
+|	loc		|	R	|	string	|	Status	|	local time	|
+|	loe		|	R/W	|	bool	|	Config	|	Load balancing enabled	|
+|	lof		|	R/W	|	uint8_t	|	Config	|	load_fallback	|
+|	log		|	R/W	|	string	|	Config	|	load_group_id	|
+|	lop		|	R/W	|	uint16_t	|	Config	|	load_priority	|
 |	lopr	|	R/W	|	bool	|	Config	|	load balancing protected	|
-|	lot	|	R/W	|	get: legacy set: JsonVariantC	o	nst | Config		| load balancing total amp	|
+|	lot		|	R/W	|	get: legacy set: JsonVariantC	o	nst | Config		| load balancing total amp	|
 |	loty	|	R/W	|	get: uint8_t set: JsonVariant	C	onst | Config		| load balancing type (Static=false, Dynamic=true)	|
-|	lpc	|	R	|	optional<int64_t>	|	Status	|	lastPvCalculation	|
+|	lpc		|	R	|	optional<int64_t>	|	Status	|	lastPvCalculation	|
 |	lpsc	|	R	|	optional<int64_t>	|	Status	|	last pv surplus calcuation	|
-|	lrc	|	R	|	optional<uint8_t>	|	Status	|	last rfid card index	|
+|	lrc		|	R	|	optional<uint8_t>	|	Status	|	last rfid card index	|
 |	lri	|	R	|	optional<string>	|	Status	|	last rfid id (only available when sendRfid)	|
 |	lrn	|	W	|	uint8_t	|	Config	|	set this to 0-9 to learn last read card id	|
 |	lrr	|	R	|	optional<int64_t>	|	Status	|	last rfid read (milliseconds since boot)	|
