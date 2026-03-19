@@ -1,5 +1,5 @@
-|	Key	|	R/W	|	Type	|	Category	|	Description	|
-|	----------	|	----------	|	----------------------------	|	-------------	|	------------------------------------------------------------------------------	----- |
+|	Key			|	R/W			|	Type							|	Category		|	Description																			|
+|	----------	|	----------	|	----------------------------	|	-------------	|	----------------------------------------------------------------------------------- |
 |	acp	|	R/W	|	bool	|	Config	|	allowChargePause	|
 |	acs	|	R/W	|	uint8_t	|	Config	|	access_control user setting (Open=0, Wait=1, EVCMS=2)	|
 |	acu	|	R	|	optional<int32_t>	|	Status	|	How many ampere is the car allowed to charge now?	|
@@ -310,3 +310,4 @@
 |	wsms	|	R	|	uint8_t	|	Status	|	WiFi state machine state (None=0, Scanning=1, Connecting=2, Connected=3)	|
 |	wst	|	R	|	uint8_t	|	Status	|	WiFi STA status (IDLE_STATUS=0, NO_SSID_AVAIL=1, SCAN_COMPLETED=2, CONNECTED=3	, CONNECT_FAILED=4, CONNECTION_LOST=5, DISCONNECTED=6, CONNECTING=7, DISCONNECTING=8, NO_SHIELD=9, WAITING_FOR_IP=10 (for compatibility with WiFi Shield library)) |
 |	zfo	|	R/W	|	float	|	Config	|	zeroFeedinOffset in W	|
+
