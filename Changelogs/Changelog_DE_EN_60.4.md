@@ -1,4 +1,5 @@
 DE
+
 Unterstützung für Nutzung lokal am Charger angelernter RFID Karten bei Verwendung des Chargers zusammen mit dem go-e Portal hinzugefügt
 
 Untertützung für Push Notifications in der go-e App hinzugefügt
@@ -37,7 +38,9 @@ Unterscheidbarkeit der Anzeige unkategorisierter Fehlerzustände verbessert
 
 
 
+
 EN
+
 
 Support using RFID tags locally enrolled on charger while charger is used together with go-e Portal
 
