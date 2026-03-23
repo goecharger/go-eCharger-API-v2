@@ -21,6 +21,13 @@ Unten im Tab "Internet", dann "Erweiterte Einstelluingen" im Menü anwählen, da
 
 <img src="screenshots/modbus-app-enable.png?raw=true" width="200" />
 
+## Schreiben in ein Modbus Register
+FN6 = Schreibe Einzel Register
+FN16 = Schreibe mehrere Register
+
+  Um in ein Modbus Register zu schreiben muss die FN16 verwendent werden.
+  FN6 ist nicht unterstützt. Das bedeutet auch wenn nur ein Register geschrieben wird muss man FN16 verwenden!
+
 ## Über die http API das Modbus interface aktivieren und prüfen
 
 Die Chargers verfügen über API Keys zum Konfigurieren und Prüfen des Modbus interface. Diese API Keys können mit der http api verwendet werden.

@@ -21,6 +21,12 @@ Tap the tab "Internet" at the bottom, then click on "Advanced Settings" in the m
 
 <img src="screenshots/modbus-app-enable.png?raw=true" width="200" />
 
+## Writing Modbus Registers
+
+To write a Modbus Register you need to use FN16!
+FN6 ist not implementet! So if you need to write a single Register you still need to use FN16!
+
+
 ## Using the http API to enable and verify the Modbus interface
 
 The chargers provide api keys to configure and verify the modbus interface. These api keys can be used with the http api.
