@@ -1,4 +1,5 @@
 DE
+
 Unterstützung zum Auslesen aller Temperatursensoren auf PRO und CORE Chargern hinzugefügt
 
 Erkennung und Anzeige von Hardwareproblemen verbessert
@@ -16,7 +17,10 @@ Unterstützung für statische IP Adressen/Gateway/DNS Server auf WLAN und LAN An
 Zuverlässigkeit von WLAN Verbindungen verbessert 
 
 
+
+
 EN
+
 Support readout of all temperature sensors on PRO and CORE chargers
 
 Improve detection and indication of hardware faults
