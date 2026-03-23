@@ -1,3 +1,4 @@
+DE
 Unterstützung für Nutzung lokal am Charger angelernter RFID Karten bei Verwendung des Chargers zusammen mit dem go-e Portal hinzugefügt
 
 Untertützung für Push Notifications in der go-e App hinzugefügt
@@ -33,3 +34,43 @@ Fehler behoben durch welchen API key “ocppao” nicht übertragen wurde
 Fehler behoben durch welchen unzureichende Geräteversorgungsspannung als fehlende Daten des Ladecontrollers angezeigt wurde
 
 Unterscheidbarkeit der Anzeige unkategorisierter Fehlerzustände verbessert
+
+
+
+EN
+
+Support using RFID tags locally enrolled on charger while charger is used together with go-e Portal
+
+Support push notifications in the go-e smartphone app
+
+Support mTLS on MQTT client
+
+Support indication of Ethernet initialization state
+
+Support firmware updates via cellular connectivity
+
+Support setting modbus byte and word order via modbus registers
+
+OCPP: Support charging profiles set in RemoteStartTransaction request
+
+OCPP: Add configuration item MinChargingCurrent (equivalent to API key “mca“)
+
+OCPP: Add configuration item RequestedCurrent (equivalent to API key “amp“)
+
+OCPP: Add configuration item ConnectionTimeOut (equivalent to API key “txt“)
+
+OCPP: Add configuration item StopChargingOnReboot hinzugefügt (equivalent to API key “osr“)
+
+OCPP: Support custom measurand LimitReason in MeterValues
+
+OCPP: Fix bug that caused configured measurand to be missing from MeterValues
+
+Fix bug that caused upper bound of time schedules to be handled inclusively inclusively instead of exclusively (10:00 - 11:00 referred to a 1h1m interval instead of 1h flat)
+
+Fix bug that caused incorrect accounting of per RFID card energy
+
+Fix bug that caused API key “ocppao“ not be transmitted
+
+Fix bug that caused too low a device supply voltage to be shown as missing charge controller data
+
+Improved visual distinction between uncategorized device errors
