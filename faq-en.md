@@ -17,7 +17,7 @@ To send a Start Transaction the Request used is RemoteStartTransaction.req. With
 | idTag | IdToken | 1..1 | Required. The identifier that Charge Point must use to start a transaction.
 | chargingProfile | ChargingProfile | 0..1 | Optional. Charging Profile to be used by the Charge Point for the requested transaction ChargingProfilePurpose MUST be set to TxProfile |
 
-## A Request via RemoteStartTransaction containing chargingProfile is not yet implementet and as such a seperate Request has to be send with set charging Profile.
+## A Request via RemoteStartTransaction containing chargingProfile is not yet implementet and as such a seperate Request has to be send with set charging Profile. This was implemented with Firmware Version 60.4.
 
 ### SetChargingProfile.req
 
