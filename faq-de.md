@@ -17,7 +17,7 @@ Um eine Start Transaktion zu starten wird die Anfrage RemoteStartTransaction.req
 | idTag | IdToken | 1..1 | Notwendig. Der Identifiezierer den der Ladepunkt für den Beginn einer Transaktion verwenden muss.
 | chargingProfile | ChargingProfile | 0..1 | Optional. Lade Profil welches der Ladepunkt verwenden soll für die angefragte Transaktion ChargingProfilePurpose MUSS auf TxProfile gesetzt sein |
 
-## Eine Anfrage mit RemoteStartTransaktion welche charginProfile beinhaltet is derzeit noch nicht implementiert und es muss somit eine Seperate Anfrage mit SetChargingProfile.req gesendet werden.
+## Eine Anfrage mit RemoteStartTransaktion welche charginProfile beinhaltet is derzeit noch nicht implementiert und es muss somit eine Seperate Anfrage mit SetChargingProfile.req gesendet werden. Diese wurde mit Firmware 60.4 implementiert.
 
 ### SetChargingProfile.req
 
