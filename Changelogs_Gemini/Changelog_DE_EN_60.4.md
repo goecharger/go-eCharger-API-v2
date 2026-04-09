@@ -1,4 +1,4 @@
-Deutsch
+# Deutsch
 
 1.	Möglichkeit den Sim Karten Slot zu wählen
 2.	Ladeprofil ist in RemoteStartTransaction Befehl wird nicht mehr ignoriert
@@ -26,7 +26,7 @@ Deutsch
 24.	Behebt falsch skalierten OCPP Temperature-measurand um Faktor 1000.
 
 
-English
+# English
 
 1.	Sim Card Slot is no chooseable
 2.	Charging profile in RemoteStartTransaction command is not ignored anymore
