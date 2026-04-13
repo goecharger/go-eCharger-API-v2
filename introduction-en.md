@@ -7,7 +7,7 @@ Basics: There is a [set of api keys](apikeys-en.md), which can be read/written o
 
 The Charging-logic will be executed once every second. The settings parameters and the last logic result are part of the api keys. If settings are changed, it takes around another second until the new expected result is visible in the status.
 
-## [Api Keys](apikeys-en.md)
+## [Api Keys](API_KEYS_FIRMWARE/apikeys-en.md)
 
 ## [Local HTTP Api](http-en.md)
 
