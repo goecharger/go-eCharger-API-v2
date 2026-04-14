@@ -18,6 +18,7 @@
 16.	Fehler behoben durch welchen API key “ocppao” nicht übertragen wurde
 17.	Fehler behoben durch welchen unzureichende Geräteversorgungsspannung als fehlende Daten des Ladecontrollers angezeigt wurde
 18.	Unterscheidbarkeit der Anzeige unkategorisierter Fehlerzustände verbessert
+19.	Fehler mit getauschter Modbus Reihenfolge wurde gefixt
 
 
 
@@ -44,4 +45,5 @@
 16.	Fix bug that caused API key “ocppao“ not be transmitted
 17.	Fix bug that caused too low a device supply voltage to be shown as missing charge controller data
 18.	Improved visual distinction between uncategorized device errors
+19.	Fix reversed Modbus byte order
 
