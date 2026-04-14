@@ -46,6 +46,8 @@ Example: http://192.168.0.77/api/set?men=true
 
 ### Holding Registers (read/write)
 
+The byte order in firmware version 60.3 was swapped. This was fixed in version 60.4.
+
 Data in this table can be read with modbus function 03 and written with modbus function 16.
 
 | Register (wire-format) | Name                        | Register Type    | Data type | Lenght | Description |
