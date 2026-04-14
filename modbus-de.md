@@ -48,6 +48,7 @@ Beispiel: http://192.168.0.77/api/set?men=true
 ### Holding Registers (read/write)
 
 Byte Reihenfolge bei Firmware 60.3 wurde getauscht. Mit 60.4 wurde dies Behoben.
+
 Daten in dieser Tabelle können mit der Modbus Funktion 03 gelesen und mit der Modbus Funktion 16 geschrieben werden.
 
 | Register (wire-format) | Bezeichnung                 | Register Typ     | Datentyp | Länge | Beschreibung |
