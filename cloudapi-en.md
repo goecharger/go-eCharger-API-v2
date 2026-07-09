@@ -2,7 +2,7 @@
 
 # go-eCharger Cloud HTTP API
 
-[The API Keys](apikeys-en.md) of the go-eCharger V3 can be read and written via the Cloud HTTP Api.
+[The API Keys](API_KEYS_FIRMWARE/apikeys-en.md) of the go-eCharger V3 can be read and written via the Cloud HTTP Api.
 
 The go-eCharger firmware version **052** is required for the Cloud API. The app can activate the API from version **2.3** on.
 
