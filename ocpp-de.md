@@ -75,9 +75,9 @@ Beispiel: http://192.168.0.77/api/set?ocppe=true&ocppu=ws://ocpp.server:1234/cha
 | ----------------------------- | -------------------------- | ---------------------------- |
 | Authorize                     | Core                       | Implementiert                |
 | BootNotification              | Core                       | Implementiert                |
-| ChangeAvailability            | Core                       | Implementiert                |
+| ChangeAvailability            | Core                       | Implementiert (operative or inoperative)|
 | ChangeConfiguration           | Core                       | Implementiert (see supported config keys below) |
-| ClearCache                    | Core                       | -                            |
+| ClearCache                    | Core                       | Implementiert                |
 | DataTransfer                  | Core                       | -                            |
 | GetConfiguration              | Core                       | Implementiert (see supported config keys below) |
 | Heartbeat                     | Core                       | Implementiert                |
@@ -95,8 +95,8 @@ Beispiel: http://192.168.0.77/api/set?ocppe=true&ocppu=ws://ocpp.server:1234/cha
 | UpdateFirmware                | Firmware Management        | Implementiert                |
 | GetLocalListVersion           | Local Auth List Management | -                            |
 | SendLocalList                 | Local Auth List Management | -                            |
-| CancelReservation             | Reservation                | -                            |
-| ReserveNow                    | Reservation                | -                            |
+| CancelReservation             | Reservation                | Implementiert                |
+| ReserveNow                    | Reservation                | Implementiert                |
 | ClearChargingProfile          | Smart Charging             | Implementiert                |
 | GetCompositeSchedule          | Smart Charging             | -                            |
 | SetChargingProfile            | Smart Charging             | Implementiert                |
