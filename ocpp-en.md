@@ -75,9 +75,9 @@ Example: http://192.168.0.77/api/set?ocppe=true&ocppu=ws://ocpp.server:1234/char
 | ----------------------------- | -------------------------- | ---------------------- |
 | Authorize                     | Core                       | Implemented            |
 | BootNotification              | Core                       | Implemented            |
-| ChangeAvailability            | Core                       | Implemented            |
+| ChangeAvailability            | Core                       | Implemented (inoperativ or operative) |
 | ChangeConfiguration           | Core                       | Implemented (see supported config keys below) |
-| ClearCache                    | Core                       | -                      |
+| ClearCache                    | Core                       | Implemented            |
 | DataTransfer                  | Core                       | -                      |
 | GetConfiguration              | Core                       | Implemented (see supported config keys below) |
 | Heartbeat                     | Core                       | Implemented            |
@@ -95,8 +95,8 @@ Example: http://192.168.0.77/api/set?ocppe=true&ocppu=ws://ocpp.server:1234/char
 | UpdateFirmware                | Firmware Management        | Implemented            |
 | GetLocalListVersion           | Local Auth List Management | Implemented            |
 | SendLocalList                 | Local Auth List Management | Implemented            |
-| CancelReservation             | Reservation                | -                      |
-| ReserveNow                    | Reservation                | -                      |
+| CancelReservation             | Reservation                | Implemented            |
+| ReserveNow                    | Reservation                | Implemented            |
 | ClearChargingProfile          | Smart Charging             | Implemented            |
 | GetCompositeSchedule          | Smart Charging             | -                      |
 | SetChargingProfile            | Smart Charging             | Implemented            |
