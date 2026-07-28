@@ -78,7 +78,7 @@ Example: http://192.168.0.77/api/set?ocppe=true&ocppu=ws://ocpp.server:1234/char
 | ChangeAvailability            | Core                       | Implemented (inoperativ or operative) |
 | ChangeConfiguration           | Core                       | Implemented (see supported config keys below) |
 | ClearCache                    | Core                       | Implemented            |
-| DataTransfer                  | Core                       | -                      |
+| DataTransfer                  | Core                       | Implemented (PRO CABLE ME)                      |
 | GetConfiguration              | Core                       | Implemented (see supported config keys below) |
 | Heartbeat                     | Core                       | Implemented            |
 | MeterValues                   | Core                       | Implemented            |
@@ -95,8 +95,8 @@ Example: http://192.168.0.77/api/set?ocppe=true&ocppu=ws://ocpp.server:1234/char
 | UpdateFirmware                | Firmware Management        | Implemented            |
 | GetLocalListVersion           | Local Auth List Management | Implemented            |
 | SendLocalList                 | Local Auth List Management | Implemented            |
-| CancelReservation             | Reservation                | Implemented            |
-| ReserveNow                    | Reservation                | Implemented            |
+| CancelReservation             | Reservation                |                        |
+| ReserveNow                    | Reservation                |                        |
 | ClearChargingProfile          | Smart Charging             | Implemented            |
 | GetCompositeSchedule          | Smart Charging             | -                      |
 | SetChargingProfile            | Smart Charging             | Implemented            |
