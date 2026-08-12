@@ -77,7 +77,7 @@ Example: http://192.168.0.77/api/set?ocppe=true&ocppu=ws://ocpp.server:1234/char
 | BootNotification              | Core                       | Implemented            |
 | ChangeAvailability            | Core                       | Implemented (inoperativ or operative) |
 | ChangeConfiguration           | Core                       | Implemented (see supported config keys below) |
-| ClearCache                    | Core                       | Implemented            |
+| ClearCache                    | Core                       | -            |
 | DataTransfer                  | Core                       | Implemented (PRO CABLE ME)                      |
 | GetConfiguration              | Core                       | Implemented (see supported config keys below) |
 | Heartbeat                     | Core                       | Implemented            |
