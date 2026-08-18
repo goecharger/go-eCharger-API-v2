@@ -30,7 +30,7 @@ Beispiel: http://192.168.0.77/api/set?mce=true&mcu=mqtt://mqtt.server:1234/
 | mqcn    | MQTT skipCertCommonNameCheck | bool     | R/W  | Config   |
 | mqss    | MQTT skipServerVerification  | bool     | R/W  | Config   |
 | mcs     | MQTT gestartet               | bool     | R    | Status   |
-| mcc     | MQTT verbunden               | bool     | R    | Status   |
+| mcc     | MQTT verbunden (zugleich Last Will / Availability) | bool     | R    | Status   |
 | mcca    | MQTT connected (Zeitstempel in Millisekunden seit dem Hochfahren) Subtrahiere von der reboot-zeit (rbt) um die Dauer seit Verbunden zu erhalten | null or milliseconds | R | Status |
 | mlr     | MQTT letzter error           | string or null | R | Status |
 | mlra    | MQTT last error (Zeitstempel in Millisekunden seit dem Hochfahren) Subtrahiere von der reboot-zeit (rbt) um die Dauer seit Error zu erhalten | null or milliseconds | R | Status |
@@ -71,6 +71,32 @@ go-eCharger/00000001/rbt 498432770
 go-eCharger/00000004/rbt 498012264
 ^C
 ```
+
+## Last Will (Verbindungsstatus)
+
+Weil die API-Key-Topics retained (persistent) sind, würden Abonnenten sonst nach einem Verbindungsverlust weiter die letzten Werte sehen — inklusive `mcc` weiterhin `true`.
+
+Bei jedem MQTT CONNECT hinterlegt der Charger ein Last Will and Testament (LWT) auf dem bestehenden `mcc`-Topic, damit der Verbindungsstatus zur restlichen API passt:
+
+- **Topic:** `{prefix}{serial}/mcc` (dasselbe Topic wie der `mcc` API Key, Standard `go-eCharger/{serial}/mcc`)
+- **Payload:** `false` (JSON-Boolean, gleiche Kodierung wie bei den anderen Keys)
+- **Retained:** ja
+- **QoS:** 1
+
+Nach erfolgreichem Verbindungsaufbau veröffentlicht der Charger auf diesem Topic retained `true`, so wie bei den anderen Status-Keys.
+
+Bei einem unerwarteten Disconnect veröffentlicht der Broker das Last Will, wodurch `mcc` auf `false` wechselt. Bei einem sauberen Disconnect (MQTT deaktiviert, Neustart, …) veröffentlicht der Charger `false` selbst, bevor er die Verbindung trennt, damit Clients in beiden Fällen denselben Status sehen.
+
+Beispiel:
+
+```
+$ mosquitto_sub -v -t 'go-eCharger/00000001/mcc'
+go-eCharger/00000001/mcc true
+# Charger verliert WLAN / Strom
+go-eCharger/00000001/mcc false
+```
+
+Clients können `mcc` als Availability-Flag verwenden (z.B. Home Assistant `availability_topic` mit `payload_available: true` und `payload_not_available: false`). Wenn Home-Assistant-Discovery aktiviert ist (`mhe`), sollten die Discovery-Payloads dieses Topic als `availability_topic` nutzen.
 
 ## Werte setzen
 
