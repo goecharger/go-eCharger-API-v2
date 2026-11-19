@@ -89,7 +89,7 @@ Example: http://192.168.0.77/api/set?ocppe=true&ocppu=ws://ocpp.server:1234/char
 | StatusNotification            | Core                       | Implemented            |
 | StopTransaction               | Core                       | Implemented            |
 | UnlockConnector               | Core                       | Implemented            |
-| GetDiagnostics                | Firmware Management        | -                      |
+| GetDiagnostics                | Firmware Management        |  Implemented (only http without forwarding to ftp)                      |
 | DiagnosticsStatusNotification | Firmware Management        | -                      |
 | FirmwareStatusNotification    | Firmware Management        | Implemented            |
 | UpdateFirmware                | Firmware Management        | Implemented            |
